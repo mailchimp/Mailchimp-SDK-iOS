@@ -20,7 +20,9 @@ Run `bundle exec fastlane create_binary_framework` to build the Swift binary fra
 
 ### Adding the XCFramework
 
-Click on the Project navigator, select your app’s target, go to the General tab, scroll down to Frameworks, Libraries, and Embedded Content. Copy the Mailchimp.xcframework from this repo and drag it into this section.
+Click on the Project navigator, select your app’s target, go to the General tab, scroll down to Frameworks, Libraries, and Embedded Content. Drag the Mailchimp.xcframework from this repo into this section.
+
+![Drag the framework into Frameworks, Libraries, and Embedded Content](https://user-images.githubusercontent.com/42216769/69161161-8f641480-0a9f-11ea-93ec-5599aac85423.gif)
 
 ### Initializing the SDK
 
@@ -38,22 +40,24 @@ The initialize method has three different fields.
 
 ### Adding A Contact
 
-To add a contact to your Mailchimp audience, first instantiate a new Contact struct. Then pass the contact into the `createOrUpdate()` method. This will add the contact to your Mailchimp audience. If the contact already exists, their information will be updated with the values that were passed in.
+To add a contact to your Mailchimp audience, first instantiate a new Contact struct. Then pass the contact into the `createOrUpdate()` method. This will add the contact to your Mailchimp audience with applied merge fields and/or tags. If the contact already exists, their information will be updated with the values that were passed in.
 
 ```swift
     var contact: Contact = Contact(emailAddress: "example@email.com")
     let mergeFields = ["FNAME": MergeFieldValue.string("Example"),
                        "LNAME": MergeFieldValue.string("User")]
     contact.mergeFields = mergeFields
+    contact.tags = [Contact.Tag(name: "mobile-signup", status: .active)]
     MailchimpSDK.createOrUpdate(contact: contact) { result in
         switch result {
         case .success:
-            print("Successfully added or updated contact:  \(emailAddress)")
+            print("Successfully added or updated contact")
         case .failure(let error):
             print("Error: \(error.localizedDescription)")
         }
     }
 ```
+
 ### Updating a Contact
 
 You may update a contact by using the same `createOrUpdate()` method described in the Adding a Contact section.
@@ -151,7 +155,9 @@ This value can only be set when the contact is created. If this is set at any ot
 
 ### Marketing Permissions
 
-Appropriate marketing permissions need to be set to email any contact/s added to an audience with GDPR enabled. Marketing permissions are set by instantiating a MarketingPermission struct with the corresponding `marketingPermissionsId` and setting `enabled` if the user granted permission for that permission ID.
+Appropriate marketing permissions need to be set to communicate with any contact/s added to an audience with GDPR enabled fields. These fields specify how a contact would like their information to be used (ex: for direct mail or for customized online advertising).
+
+Marketing permissions are set by instantiating a MarketingPermission struct with the corresponding `marketingPermissionsId` and setting `enabled` if the user granted permission for that permission ID.
 
 ```swift
     let permission1 = Contact.MarketingPermission(marketingPermissionId: "permission1", enabled: true)
@@ -192,4 +198,13 @@ Any event can have properties associated with it. These properties have a String
 ## FAQ
 
 Do you have an Android version?
->https://github.com/mailchimp/Mailchimp-SDK-Android
+>Yes! You can find it [here](https://github.com/mailchimp/Mailchimp-SDK-Android)
+
+Why is the SDK throwing an error when I try to create a contact?
+>Check that you are initializing the SDK with the correct token format. The token includes the `-us` suffix.
+
+Why do calls silently fail?
+>For security, our SDK is write-only. Contact data cannot be retrieved via the SDK. Calls fail silently so that contact data cannot be deduced from error messages. (e.g. If adding a contact failed loudly, one could deduce that the contact exists on your list.)
+
+How do I use the SDK in my Objective-C project?
+>The best way to interact with an Objective-C project is to create a Swift wrapper object that can initialize the SDK and create a contact for you.
