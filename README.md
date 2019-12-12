@@ -16,7 +16,7 @@ Run `bundle exec fastlane create_binary_framework` to build the Swift binary fra
 
 ### Retrieving SDK Key
 
-* TODO Update this when we finalize how to get the key
+* Coming Soon
 
 ### Adding the XCFramework
 
@@ -192,7 +192,4 @@ Any event can have properties associated with it. These properties have a String
 ## FAQ
 
 Do you have an Android version?
->Yes! You can find it here TODO ADD LINK
-
-Why do calls silently fail
->TODO fill this in
+>https://github.com/mailchimp/Mailchimp-SDK-Android
