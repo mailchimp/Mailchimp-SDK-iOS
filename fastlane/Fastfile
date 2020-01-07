@@ -51,7 +51,7 @@ platform :ios do
     # Remove any existing xcframeworks on local machine
     sh("rm -rf #{xcframework_output_path}")
 
-    # When Xcode 11 is officially released, fastlane may support -create-xcframework in the xcodebuild() command which could replace this (https://github.com/fastlane/fastlane/issues/15055)
+    # When fastlane supports -create-xcframework in the xcodebuild() command, we could replace this (https://github.com/fastlane/fastlane/issues/15055)
     sh("xcodebuild -create-xcframework -framework '#{device_archive_path}/Products/Library/Frameworks/#{framework_name}.framework' -framework '#{simulator_archive_path}/Products/Library/Frameworks/#{framework_name}.framework' -output '#{output_path}/#{xcframework_file_name}'")
   end
 
@@ -83,7 +83,7 @@ platform :ios do
     FileUtils.remove_dir(deploy_path, force = true)
 
     set_github_release(
-      repository_name: "mailchimp/Mailchimp-SDK-iOS-Internal", # This will change to the non-Internal repo
+      repository_name: "mailchimp/Mailchimp-SDK-iOS",
       api_token: ENV["GITHUB_TOKEN"],
       name: "v#{version}",
       tag_name: "v#{version}",
