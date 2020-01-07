@@ -16,8 +16,6 @@
 //
 
 
-// NOTE: Commented tests require a working API and API test token to pass. They are disabled until those prerequisites are met.
-
 import XCTest
 @testable import MailchimpSDK
 
@@ -63,52 +61,6 @@ class MailchimpSDKTests: XCTestCase {
         }
         XCTAssertNotNil(MailchimpSDK.api)
     }
-
-    /*
-    func testCreateContact() {
-        let contact: Contact = Contact(emailAddress: "test@mailchimp.com")
-
-        let testExpectation = expectation(description: "Network Request")
-        let dataTask = Audience.create(contact: contact) { result in
-            switch result {
-            case .success(let responseString):
-                XCTAssertNil(responseString) // API endpoint does not yet exist. When this test starts failing, we will update it.
-            case .failure(let error):
-                XCTAssertNotNil(error as APIError)
-                if case .apiError(let response) = error {
-                    XCTAssertEqual(response.status, 404)
-                    XCTAssertEqual(response.type, "http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/")
-                    XCTAssertEqual(response.detail, "Invalid path")
-                }
-            }
-            testExpectation.fulfill()
-        }
-        XCTAssertNotNil(dataTask)
-        waitForExpectations(timeout: timeout, handler: nil)
-    }
-    
-    func testUpdateContact() {
-        let contact: Contact = Contact(emailAddress: "test@mailchimp.com")
-
-        let testExpectation = expectation(description: "Network Request")
-        let dataTask = Audience.update(contact: contact) { result in
-            switch result {
-            case .success(let responseString):
-                XCTAssertNil(responseString) // API endpoint does not yet exist. When this test starts failing, we will update it.
-            case .failure(let error):
-                XCTAssertNotNil(error as APIError)
-                if case .apiError(let response) = error {
-                    XCTAssertEqual(response.status, 404)
-                    XCTAssertEqual(response.type, "http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/")
-                    XCTAssertEqual(response.detail, "Invalid path")
-                }
-            }
-            testExpectation.fulfill()
-        }
-        XCTAssertNotNil(dataTask)
-        waitForExpectations(timeout: timeout, handler: nil)
-    }
-      */
     
     func testEventRequest() {
         let api = AnzeeAPI(token: token)
@@ -146,88 +98,6 @@ class MailchimpSDKTests: XCTestCase {
         XCTAssertNotNil(contact.tags)
         XCTAssertEqual(3, contact.tags?.count)
     }
-
-    /*
-    func testAddTag() {
-        let testExpectation = expectation(description: "Network Request")
-        let dataTask = Audience.addTag(name: "VIP", emailAddress: "test@mailchimp.com") { result in
-            switch result {
-            case .success(let responseString):
-                XCTAssertNil(responseString) // API endpoint does not yet exist. When this test starts failing, we will update it.
-            case .failure(let error):
-                XCTAssertNotNil(error as APIError)
-                if case .apiError(let response) = error {
-                    XCTAssertEqual(response.status, 404)
-                    XCTAssertEqual(response.type, "http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/")
-                    XCTAssertEqual(response.detail, "Invalid path")
-                }
-            }
-            testExpectation.fulfill()
-        }
-        XCTAssertNotNil(dataTask)
-        waitForExpectations(timeout: timeout, handler: nil)
-    }
-
-    func testAddTags() {
-        let testExpectation = expectation(description: "Network Request")
-        let dataTask = Audience.addTags(names: ["VIP", "Simian", "Ape"], emailAddress: "test@mailchimp.com") { result in
-            switch result {
-            case .success(let responseString):
-                XCTAssertNil(responseString) // API endpoint does not yet exist. When this test starts failing, we will update it.
-            case .failure(let error):
-                XCTAssertNotNil(error as APIError)
-                if case .apiError(let response) = error {
-                    XCTAssertEqual(response.status, 404)
-                    XCTAssertEqual(response.type, "http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/")
-                    XCTAssertEqual(response.detail, "Invalid path")
-                }
-            }
-            testExpectation.fulfill()
-        }
-        XCTAssertNotNil(dataTask)
-        waitForExpectations(timeout: timeout, handler: nil)
-    }
-
-    func testRemoveTag() {
-        let testExpectation = expectation(description: "Network Request")
-        let dataTask = Audience.removeTag(name: "VIP", emailAddress: "test@mailchimp.com") { result in
-            switch result {
-            case .success(let responseString):
-                XCTAssertNil(responseString) // API endpoint does not yet exist. When this test starts failing, we will update it.
-            case .failure(let error):
-                XCTAssertNotNil(error as APIError)
-                if case .apiError(let response) = error {
-                    XCTAssertEqual(response.status, 404)
-                    XCTAssertEqual(response.type, "http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/")
-                    XCTAssertEqual(response.detail, "Invalid path")
-                }
-            }
-            testExpectation.fulfill()
-        }
-        XCTAssertNotNil(dataTask)
-        waitForExpectations(timeout: timeout, handler: nil)
-    }
-
-    func testRemoveTags() {
-        let testExpectation = expectation(description: "Network Request")
-        let dataTask = Audience.removeTags(names: ["VIP", "Simian", "Ape"], emailAddress: "test@mailchimp.com") { result in
-            switch result {
-            case .success(let responseString):
-                XCTAssertNil(responseString) // API endpoint does not yet exist. When this test starts failing, we will update it.
-            case .failure(let error):
-                XCTAssertNotNil(error as APIError)
-                if case .apiError(let response) = error {
-                    XCTAssertEqual(response.status, 404)
-                    XCTAssertEqual(response.type, "http://developer.mailchimp.com/documentation/mailchimp/guides/error-glossary/")
-                    XCTAssertEqual(response.detail, "Invalid path")
-                }
-            }
-            testExpectation.fulfill()
-        }
-        XCTAssertNotNil(dataTask)
-        waitForExpectations(timeout: timeout, handler: nil)
-    }
-      */
 
     func testPostBody() {
         let emailAddress = "test@mailchimp.com"
