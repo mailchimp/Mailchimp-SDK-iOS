@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B95896A122774C0C00F7509B /* MailchimpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958969722774C0C00F7509B /* MailchimpSDK.framework */; };
+		B95896A622774C0C00F7509B /* MailchimpSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896A522774C0C00F7509B /* MailchimpSDKTests.swift */; };
+		B95896A822774C0C00F7509B /* MailchimpSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B958969A22774C0C00F7509B /* MailchimpSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B95896B82277689F00F7509B /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896B72277689F00F7509B /* URLRequest.swift */; };
+		B95896BD227768AB00F7509B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896B9227768AB00F7509B /* APIRequest.swift */; };
+		B95896BE227768AB00F7509B /* AnzeeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896BA227768AB00F7509B /* AnzeeAPI.swift */; };
+		B95896BF227768AB00F7509B /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896BB227768AB00F7509B /* APIErrorResponse.swift */; };
+		B95896C0227768AB00F7509B /* AnzeeConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896BC227768AB00F7509B /* AnzeeConstants.swift */; };
+		B95896C6227B73CC00F7509B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896C5227B73CC00F7509B /* Result.swift */; };
+		B95896CA2280BA8700F7509B /* ContactRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896C92280BA8700F7509B /* ContactRequest.swift */; };
+		B95896CC2280BAA700F7509B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896CB2280BAA700F7509B /* Contact.swift */; };
+		B95896D02281FD2D00F7509B /* PostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896CF2281FD2D00F7509B /* PostBody.swift */; };
+		BF6D325623721B5B003F4A19 /* EventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D325523721B5B003F4A19 /* EventOperation.swift */; };
+		BFCF7A1F236B3503004BFC2B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF7A1E236B3503004BFC2B /* EventTests.swift */; };
+		BFD503FB2369DA4500939748 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD503FA2369DA4500939748 /* EventRequest.swift */; };
+		BFD503FD2369DAB100939748 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD503FC2369DAB100939748 /* Event.swift */; };
+		BFF30D7F2371FB3D005FAABC /* ContactOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */; };
+		F239C3FD229F2DDF00FB85C3 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */; };
+		F26745E522F89DAC00AD1E93 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26745E422F89DAC00AD1E93 /* ContactTests.swift */; };
+		F288D79E2289BBD7004CB563 /* MailchimpSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */; };
+		F2A2203122984C7600F57058 /* MergeFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2203022984C7600F57058 /* MergeFieldTests.swift */; };
+		F2AFC4D022947FFB006C742B /* MergeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFC4CF22947FFB006C742B /* MergeField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B95896A222774C0C00F7509B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B958968E22774C0C00F7509B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B958969622774C0C00F7509B;
+			remoteInfo = "Mailchimp SDK";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B958969722774C0C00F7509B /* MailchimpSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailchimpSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B958969A22774C0C00F7509B /* MailchimpSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailchimpSDK.h; sourceTree = "<group>"; };
+		B958969B22774C0C00F7509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95896A022774C0C00F7509B /* MailchimpSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailchimpSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95896A522774C0C00F7509B /* MailchimpSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailchimpSDKTests.swift; sourceTree = "<group>"; };
+		B95896A722774C0C00F7509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95896B72277689F00F7509B /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		B95896B9227768AB00F7509B /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		B95896BA227768AB00F7509B /* AnzeeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnzeeAPI.swift; sourceTree = "<group>"; };
+		B95896BB227768AB00F7509B /* APIErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		B95896BC227768AB00F7509B /* AnzeeConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnzeeConstants.swift; sourceTree = "<group>"; };
+		B95896C5227B73CC00F7509B /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B95896C92280BA8700F7509B /* ContactRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRequest.swift; sourceTree = "<group>"; };
+		B95896CB2280BAA700F7509B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		B95896CF2281FD2D00F7509B /* PostBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBody.swift; sourceTree = "<group>"; };
+		BF6D325523721B5B003F4A19 /* EventOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOperation.swift; sourceTree = "<group>"; };
+		BFCF7A1E236B3503004BFC2B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		BFD503FA2369DA4500939748 /* EventRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
+		BFD503FC2369DAB100939748 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOperation.swift; sourceTree = "<group>"; };
+		F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
+		F26745E422F89DAC00AD1E93 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
+		F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MailchimpSDK.swift; path = SDK/MailchimpSDK.swift; sourceTree = "<group>"; };
+		F2A2203022984C7600F57058 /* MergeFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeFieldTests.swift; sourceTree = "<group>"; };
+		F2AFC4CF22947FFB006C742B /* MergeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B958969422774C0C00F7509B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B958969D22774C0C00F7509B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95896A122774C0C00F7509B /* MailchimpSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B958968D22774C0C00F7509B = {
+			isa = PBXGroup;
+			children = (
+				B958969922774C0C00F7509B /* MailchimpSDK */,
+				B95896A422774C0C00F7509B /* MailchimpSDKTests */,
+				B958969822774C0C00F7509B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B958969822774C0C00F7509B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B958969722774C0C00F7509B /* MailchimpSDK.framework */,
+				B95896A022774C0C00F7509B /* MailchimpSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B958969922774C0C00F7509B /* MailchimpSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F221C0A5229321F30036D6C5 /* LocalData */,
+				B95896B122774C9A00F7509B /* SDK */,
+				F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */,
+				B95896B222774CA100F7509B /* Core */,
+				B958969A22774C0C00F7509B /* MailchimpSDK.h */,
+				B958969B22774C0C00F7509B /* Info.plist */,
+			);
+			path = MailchimpSDK;
+			sourceTree = "<group>";
+		};
+		B95896A422774C0C00F7509B /* MailchimpSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2A2202F22984C4500F57058 /* Audience */,
+				BFCF7A1D236B34F3004BFC2B /* Events */,
+				B95896A522774C0C00F7509B /* MailchimpSDKTests.swift */,
+				B95896A722774C0C00F7509B /* Info.plist */,
+			);
+			path = MailchimpSDKTests;
+			sourceTree = "<group>";
+		};
+		B95896B122774C9A00F7509B /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				B95896C82280BA0A00F7509B /* Models */,
+				BFF30D7D2371FB3D005FAABC /* Operations */,
+				B95896C72280B9FD00F7509B /* Requests */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		B95896B222774CA100F7509B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B95896B62277689100F7509B /* Extensions */,
+				B95896B322774CB100F7509B /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B95896B322774CB100F7509B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B95896BA227768AB00F7509B /* AnzeeAPI.swift */,
+				B95896B9227768AB00F7509B /* APIRequest.swift */,
+				B95896BB227768AB00F7509B /* APIErrorResponse.swift */,
+				B95896BC227768AB00F7509B /* AnzeeConstants.swift */,
+				B95896CF2281FD2D00F7509B /* PostBody.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B95896B62277689100F7509B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B95896B72277689F00F7509B /* URLRequest.swift */,
+				B95896C5227B73CC00F7509B /* Result.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B95896C72280B9FD00F7509B /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				B95896C92280BA8700F7509B /* ContactRequest.swift */,
+				BFD503FA2369DA4500939748 /* EventRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		B95896C82280BA0A00F7509B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B95896CB2280BAA700F7509B /* Contact.swift */,
+				F2AFC4CF22947FFB006C742B /* MergeField.swift */,
+				F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */,
+				BFD503FC2369DAB100939748 /* Event.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFCF7A1D236B34F3004BFC2B /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				BFCF7A1E236B3503004BFC2B /* EventTests.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		BFF30D7D2371FB3D005FAABC /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				BF6D325523721B5B003F4A19 /* EventOperation.swift */,
+				BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		F221C0A5229321F30036D6C5 /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalData;
+			sourceTree = "<group>";
+		};
+		F2A2202F22984C4500F57058 /* Audience */ = {
+			isa = PBXGroup;
+			children = (
+				F2A2203022984C7600F57058 /* MergeFieldTests.swift */,
+				F26745E422F89DAC00AD1E93 /* ContactTests.swift */,
+			);
+			path = Audience;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B958969222774C0C00F7509B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95896A822774C0C00F7509B /* MailchimpSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B958969622774C0C00F7509B /* MailchimpSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95896AB22774C0C00F7509B /* Build configuration list for PBXNativeTarget "MailchimpSDK" */;
+			buildPhases = (
+				B958969222774C0C00F7509B /* Headers */,
+				B958969322774C0C00F7509B /* Sources */,
+				B958969422774C0C00F7509B /* Frameworks */,
+				B958969522774C0C00F7509B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MailchimpSDK;
+			productName = "Mailchimp SDK";
+			productReference = B958969722774C0C00F7509B /* MailchimpSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B958969F22774C0C00F7509B /* MailchimpSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95896AE22774C0C00F7509B /* Build configuration list for PBXNativeTarget "MailchimpSDKTests" */;
+			buildPhases = (
+				B958969C22774C0C00F7509B /* Sources */,
+				B958969D22774C0C00F7509B /* Frameworks */,
+				B958969E22774C0C00F7509B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B95896A322774C0C00F7509B /* PBXTargetDependency */,
+			);
+			name = MailchimpSDKTests;
+			productName = "Mailchimp SDKTests";
+			productReference = B95896A022774C0C00F7509B /* MailchimpSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B958968E22774C0C00F7509B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "The Rocket Science Group LLC";
+				TargetAttributes = {
+					B958969622774C0C00F7509B = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					B958969F22774C0C00F7509B = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B958969122774C0C00F7509B /* Build configuration list for PBXProject "MailchimpSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B958968D22774C0C00F7509B;
+			productRefGroup = B958969822774C0C00F7509B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B958969622774C0C00F7509B /* MailchimpSDK */,
+				B958969F22774C0C00F7509B /* MailchimpSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B958969522774C0C00F7509B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B958969E22774C0C00F7509B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B958969322774C0C00F7509B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95896C6227B73CC00F7509B /* Result.swift in Sources */,
+				BFF30D7F2371FB3D005FAABC /* ContactOperation.swift in Sources */,
+				BF6D325623721B5B003F4A19 /* EventOperation.swift in Sources */,
+				B95896BF227768AB00F7509B /* APIErrorResponse.swift in Sources */,
+				B95896BE227768AB00F7509B /* AnzeeAPI.swift in Sources */,
+				BFD503FD2369DAB100939748 /* Event.swift in Sources */,
+				B95896C0227768AB00F7509B /* AnzeeConstants.swift in Sources */,
+				B95896CC2280BAA700F7509B /* Contact.swift in Sources */,
+				B95896CA2280BA8700F7509B /* ContactRequest.swift in Sources */,
+				F2AFC4D022947FFB006C742B /* MergeField.swift in Sources */,
+				B95896D02281FD2D00F7509B /* PostBody.swift in Sources */,
+				F288D79E2289BBD7004CB563 /* MailchimpSDK.swift in Sources */,
+				BFD503FB2369DA4500939748 /* EventRequest.swift in Sources */,
+				B95896BD227768AB00F7509B /* APIRequest.swift in Sources */,
+				B95896B82277689F00F7509B /* URLRequest.swift in Sources */,
+				F239C3FD229F2DDF00FB85C3 /* CountryCode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B958969C22774C0C00F7509B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCF7A1F236B3503004BFC2B /* EventTests.swift in Sources */,
+				B95896A622774C0C00F7509B /* MailchimpSDKTests.swift in Sources */,
+				F2A2203122984C7600F57058 /* MergeFieldTests.swift in Sources */,
+				F26745E522F89DAC00AD1E93 /* ContactTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B95896A322774C0C00F7509B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B958969622774C0C00F7509B /* MailchimpSDK */;
+			targetProxy = B95896A222774C0C00F7509B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B95896A922774C0C00F7509B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B95896AA22774C0C00F7509B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B95896AC22774C0C00F7509B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X34GKSR943;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MailchimpSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B95896AD22774C0C00F7509B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = X34GKSR943;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MailchimpSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B95896AF22774C0C00F7509B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X34GKSR943;
+				INFOPLIST_FILE = MailchimpSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.Mailchimp-SDKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B95896B022774C0C00F7509B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X34GKSR943;
+				INFOPLIST_FILE = MailchimpSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.Mailchimp-SDKTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B958969122774C0C00F7509B /* Build configuration list for PBXProject "MailchimpSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95896A922774C0C00F7509B /* Debug */,
+				B95896AA22774C0C00F7509B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95896AB22774C0C00F7509B /* Build configuration list for PBXNativeTarget "MailchimpSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95896AC22774C0C00F7509B /* Debug */,
+				B95896AD22774C0C00F7509B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95896AE22774C0C00F7509B /* Build configuration list for PBXNativeTarget "MailchimpSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95896AF22774C0C00F7509B /* Debug */,
+				B95896B022774C0C00F7509B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B958968E22774C0C00F7509B /* Project object */;
+}

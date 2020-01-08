@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF3EB6D923746E3D0075EF69 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EB6D823746E3D0075EF69 /* CreateView.swift */; };
+		BF3EB6DD23746FC80075EF69 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EB6DC23746FC80075EF69 /* Components.swift */; };
+		BF3EB6DF237492670075EF69 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3EB6DE237492670075EF69 /* EventView.swift */; };
+		F235666922B41EE60064C041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235666822B41EE60064C041 /* AppDelegate.swift */; };
+		F235666B22B41EE60064C041 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235666A22B41EE60064C041 /* SceneDelegate.swift */; };
+		F235666D22B41EE60064C041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235666C22B41EE60064C041 /* ContentView.swift */; };
+		F235666F22B41EE80064C041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F235666E22B41EE80064C041 /* Assets.xcassets */; };
+		F235667222B41EE80064C041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F235667122B41EE80064C041 /* Preview Assets.xcassets */; };
+		F235667522B41EE80064C041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F235667322B41EE80064C041 /* LaunchScreen.storyboard */; };
+		F235668022B41EE80064C041 /* PanionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F235667F22B41EE80064C041 /* PanionAppTests.swift */; };
+		F2D2D07222D5099A00A73E05 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2D07122D5099A00A73E05 /* ContactView.swift */; };
+		F2DB537422D51AF800671139 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DB537322D51AF800671139 /* AddressView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F235667C22B41EE80064C041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F235665D22B41EE60064C041 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F235666422B41EE60064C041;
+			remoteInfo = "Panion App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B98206D022C50EA80082BBFA /* Mailchimp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Mailchimp.xcframework; path = ../build/Mailchimp.xcframework; sourceTree = "<group>"; };
+		BF3EB6D823746E3D0075EF69 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		BF3EB6DC23746FC80075EF69 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		BF3EB6DE237492670075EF69 /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		F235666522B41EE60064C041 /* PanionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PanionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F235666822B41EE60064C041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F235666A22B41EE60064C041 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F235666C22B41EE60064C041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F235666E22B41EE80064C041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F235667122B41EE80064C041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F235667422B41EE80064C041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F235667622B41EE80064C041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F235667B22B41EE80064C041 /* PanionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F235667F22B41EE80064C041 /* PanionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanionAppTests.swift; sourceTree = "<group>"; };
+		F235668122B41EE80064C041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D2D07122D5099A00A73E05 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		F2DB537322D51AF800671139 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F235667822B41EE80064C041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F235665C22B41EE60064C041 = {
+			isa = PBXGroup;
+			children = (
+				F235666722B41EE60064C041 /* PanionApp */,
+				F235667E22B41EE80064C041 /* PanionAppTests */,
+				F235666622B41EE60064C041 /* Products */,
+				F235669322B41F980064C041 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F235666622B41EE60064C041 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F235666522B41EE60064C041 /* PanionApp.app */,
+				F235667B22B41EE80064C041 /* PanionAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F235666722B41EE60064C041 /* PanionApp */ = {
+			isa = PBXGroup;
+			children = (
+				F235666822B41EE60064C041 /* AppDelegate.swift */,
+				F235666A22B41EE60064C041 /* SceneDelegate.swift */,
+				F235666C22B41EE60064C041 /* ContentView.swift */,
+				BF3EB6D823746E3D0075EF69 /* CreateView.swift */,
+				BF3EB6DC23746FC80075EF69 /* Components.swift */,
+				F2D2D07122D5099A00A73E05 /* ContactView.swift */,
+				F2DB537322D51AF800671139 /* AddressView.swift */,
+				BF3EB6DE237492670075EF69 /* EventView.swift */,
+				F235666E22B41EE80064C041 /* Assets.xcassets */,
+				F235667322B41EE80064C041 /* LaunchScreen.storyboard */,
+				F235667622B41EE80064C041 /* Info.plist */,
+				F235667022B41EE80064C041 /* Preview Content */,
+			);
+			path = PanionApp;
+			sourceTree = "<group>";
+		};
+		F235667022B41EE80064C041 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F235667122B41EE80064C041 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F235667E22B41EE80064C041 /* PanionAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F235667F22B41EE80064C041 /* PanionAppTests.swift */,
+				F235668122B41EE80064C041 /* Info.plist */,
+			);
+			path = PanionAppTests;
+			sourceTree = "<group>";
+		};
+		F235669322B41F980064C041 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B98206D022C50EA80082BBFA /* Mailchimp.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F235666422B41EE60064C041 /* PanionApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F235668422B41EE80064C041 /* Build configuration list for PBXNativeTarget "PanionApp" */;
+			buildPhases = (
+				BF2436BC230EFA3200FAE639 /* Create Binary Framework */,
+				F235666122B41EE60064C041 /* Sources */,
+				F235666322B41EE60064C041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PanionApp;
+			productName = "Panion App";
+			productReference = F235666522B41EE60064C041 /* PanionApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F235667A22B41EE80064C041 /* PanionAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F235668722B41EE80064C041 /* Build configuration list for PBXNativeTarget "PanionAppTests" */;
+			buildPhases = (
+				F235667722B41EE80064C041 /* Sources */,
+				F235667822B41EE80064C041 /* Frameworks */,
+				F235667922B41EE80064C041 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F235667D22B41EE80064C041 /* PBXTargetDependency */,
+			);
+			name = PanionAppTests;
+			productName = "Panion AppTests";
+			productReference = F235667B22B41EE80064C041 /* PanionAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F235665D22B41EE60064C041 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "The Rocket Science Group LLC";
+				TargetAttributes = {
+					F235666422B41EE60064C041 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					F235667A22B41EE80064C041 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = F235666422B41EE60064C041;
+					};
+				};
+			};
+			buildConfigurationList = F235666022B41EE60064C041 /* Build configuration list for PBXProject "PanionApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F235665C22B41EE60064C041;
+			productRefGroup = F235666622B41EE60064C041 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F235666422B41EE60064C041 /* PanionApp */,
+				F235667A22B41EE80064C041 /* PanionAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F235666322B41EE60064C041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F235667522B41EE80064C041 /* LaunchScreen.storyboard in Resources */,
+				F235667222B41EE80064C041 /* Preview Assets.xcassets in Resources */,
+				F235666F22B41EE80064C041 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F235667922B41EE80064C041 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF2436BC230EFA3200FAE639 /* Create Binary Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Create Binary Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=/usr/local/bin:$PATH\nexport PATH=\"$HOME/.fastlane/bin:$PATH\"\n\ncd \"$PROJECT_DIR\"/../fastlane\n\nfastlane create_binary_framework\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F235666122B41EE60064C041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F235666922B41EE60064C041 /* AppDelegate.swift in Sources */,
+				BF3EB6DD23746FC80075EF69 /* Components.swift in Sources */,
+				F235666B22B41EE60064C041 /* SceneDelegate.swift in Sources */,
+				F235666D22B41EE60064C041 /* ContentView.swift in Sources */,
+				F2D2D07222D5099A00A73E05 /* ContactView.swift in Sources */,
+				BF3EB6D923746E3D0075EF69 /* CreateView.swift in Sources */,
+				F2DB537422D51AF800671139 /* AddressView.swift in Sources */,
+				BF3EB6DF237492670075EF69 /* EventView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F235667722B41EE80064C041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F235668022B41EE80064C041 /* PanionAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F235667D22B41EE80064C041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F235666422B41EE60064C041 /* PanionApp */;
+			targetProxy = F235667C22B41EE80064C041 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F235667322B41EE80064C041 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F235667422B41EE80064C041 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F235668222B41EE80064C041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F235668322B41EE80064C041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F235668522B41EE80064C041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PanionApp\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = X34GKSR943;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PanionApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					MailchimpSDK,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.PanionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F235668622B41EE80064C041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"PanionApp\"/Preview\\ Content";
+				DEVELOPMENT_TEAM = X34GKSR943;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PanionApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					MailchimpSDK,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.PanionApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F235668822B41EE80064C041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X34GKSR943;
+				INFOPLIST_FILE = PanionAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.-Panion.Panion-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PanionApp.app/PanionApp";
+			};
+			name = Debug;
+		};
+		F235668922B41EE80064C041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X34GKSR943;
+				INFOPLIST_FILE = PanionAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.-Panion.Panion-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PanionApp.app/PanionApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F235666022B41EE60064C041 /* Build configuration list for PBXProject "PanionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F235668222B41EE80064C041 /* Debug */,
+				F235668322B41EE80064C041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F235668422B41EE80064C041 /* Build configuration list for PBXNativeTarget "PanionApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F235668522B41EE80064C041 /* Debug */,
+				F235668622B41EE80064C041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F235668722B41EE80064C041 /* Build configuration list for PBXNativeTarget "PanionAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F235668822B41EE80064C041 /* Debug */,
+				F235668922B41EE80064C041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F235665D22B41EE60064C041 /* Project object */;
+}

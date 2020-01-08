@@ -1,0 +1,123 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+fastlane_require 'fileutils'
+
+default_platform(:ios)
+
+workspace_name = "MailchimpSDK.xcworkspace"
+sdk_scheme_name = "MailchimpSDK"
+build_path = "../build"
+deploy_path = "../deploy"
+device_archive_path = "#{build_path}/MailchimpDeviceSDK.xcarchive"
+simulator_archive_path = "#{build_path}/MailchimpSimulatorSDK.xcarchive"
+framework_name = "MailchimpSDK"
+xcframework_file_name = "Mailchimp.xcframework"
+xcframework_output_path = "#{build_path}/#{xcframework_file_name}"
+deploy_zip = "Mailchimp-SDK-iOS.zip"
+changelog_path = "../Changelog"
+readme_path = "../README.md"
+license_path = "../LICENSE"
+
+platform :ios do
+  desc "Builds the SDK framework"
+  lane :build_framework do
+    xcodebuild()
+  end
+
+  desc "Archives the SDK framework"
+  lane :archive_framework do
+    # Defining 2 destinations in a single call did not work in practice. This will build the 2 archives separately.
+    sh("xcodebuild archive -workspace '../#{workspace_name}' -archivePath '#{device_archive_path}' -scheme #{sdk_scheme_name} -destination 'generic/platform=iOS' SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES")
+    sh("xcodebuild archive -workspace '../#{workspace_name}' -archivePath '#{simulator_archive_path}' -scheme #{sdk_scheme_name} -destination 'generic/platform=iOS Simulator' SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES")
+  end
+
+  desc "Create Swift Binary Framework"
+  lane :create_binary_framework do
+    archive_framework
+
+    # Remove any existing xcframeworks on local machine
+    sh("rm -rf #{xcframework_output_path}")
+
+    # When fastlane supports -create-xcframework in the xcodebuild() command, we could replace this (https://github.com/fastlane/fastlane/issues/15055)
+    sh("xcodebuild -create-xcframework -framework '#{device_archive_path}/Products/Library/Frameworks/#{framework_name}.framework' -framework '#{simulator_archive_path}/Products/Library/Frameworks/#{framework_name}.framework' -output '#{output_path}/#{xcframework_file_name}'")
+  end
+
+  desc "Create a release candidate for a given version"
+  lane :release do |args|
+    # Check for version argument
+    version = args[:version] || ENV['MAILCHIMP_SDK_VERSION'] || branch_version
+    if version.nil?
+      UI.user_error! "Version not provided through argument, environment variable, or release branch name. Try running: `fastlane release version:MAJOR.MINOR.PATCH` or setting the environment variable named MAILCHIMP_SDK_VERSION, where MAJOR.MINOR.PATCH represents the version number."
+    end
+
+    # Clean up previous runs
+    clean
+
+    # Create the binary framework
+    create_binary_framework
+
+    # Move the files into a temporary deploy directory
+    FileUtils.mkdir(deploy_path)
+    FileUtils.cp_r("#{output_path}/#{xcframework_file_name}", "#{deploy_path}/#{xcframework_file_name}")
+    FileUtils.copy(readme_path, deploy_path)
+    FileUtils.copy(changelog_path, deploy_path)
+    FileUtils.copy(license_path, deploy_path)
+
+    # Zip the framework, README, and Changelog
+    zip(path: "deploy", output_path: deploy_zip)
+
+    # Remove temporary deploy directory
+    FileUtils.remove_dir(deploy_path, force = true)
+
+    set_github_release(
+      repository_name: "mailchimp/Mailchimp-SDK-iOS",
+      api_token: ENV["GITHUB_TOKEN"],
+      name: "v#{version}",
+      tag_name: "v#{version}",
+      description: (File.read(changelog_path) rescue "No Changelog provided"),
+      commitish: "master",
+      upload_assets: deploy_zip
+    )
+  end
+
+  desc "Clean deploy artifacts"
+  lane :clean do
+    # Remove any previous deploy directory
+    FileUtils.remove_dir(deploy_path, force = true)
+
+    # Remove any previous zipped SDK products
+    FileUtils.remove_file("../#{deploy_zip}", force = true)
+  end
+end
+
+def output_path
+  # Use Bitrise Deploy Directory as output path if available
+  return ENV.fetch('BITRISE_DEPLOY_DIR', "../build")
+end
+
+def branch_version
+  # https://rubular.com/r/A8FeXBzT1z4zJR
+  version_regex = /^releases\/v(\d+\.\d+(\.\d+)*)$/
+
+  if matches = git_branch.match(version_regex)
+    version = matches.captures[0]
+    puts "Version: #{version}"
+    return version
+  else
+    puts "No version number found in \"#{git_branch}\""
+  end
+  return nil
+end
