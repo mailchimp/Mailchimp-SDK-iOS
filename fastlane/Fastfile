@@ -34,7 +34,8 @@ license_path = "../LICENSE"
 platform :ios do
   desc "Builds the SDK framework"
   lane :build_framework do
-    xcodebuild()
+    xcodebuild(scheme: sdk_scheme_name,
+               workspace: workspace_name)
   end
 
   desc "Archives the SDK framework"
