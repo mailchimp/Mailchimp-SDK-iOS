@@ -1,4 +1,4 @@
-# Coming Soon
+# Minor change to test PR
 
 [<img width="250" height="119" src="https://developer.mailchimp.com/documentation/mailchimp/img/lockup.svg"/>](http://www.mailchimp.com)
 
