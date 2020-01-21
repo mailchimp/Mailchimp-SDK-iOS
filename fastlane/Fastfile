@@ -27,7 +27,7 @@ framework_name = "MailchimpSDK"
 xcframework_file_name = "Mailchimp.xcframework"
 xcframework_output_path = "#{build_path}/#{xcframework_file_name}"
 deploy_zip = "Mailchimp-SDK-iOS.zip"
-changelog_path = "../Changelog"
+changelog_path = "../Changelog.md"
 readme_path = "../README.md"
 license_path = "../LICENSE"
 
