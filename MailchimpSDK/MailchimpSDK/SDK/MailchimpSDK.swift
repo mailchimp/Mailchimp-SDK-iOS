@@ -29,7 +29,7 @@ public class MailchimpSDK: NSObject {
     public static var debugMode: Bool = false
 
     /// Version of this SDK.
-    public static let version: String = "0.1.1"
+    public static let version: String = "0.1.2"
 
     /// The API protocol conforming object that processes requests for this class.
     static var api: API?
