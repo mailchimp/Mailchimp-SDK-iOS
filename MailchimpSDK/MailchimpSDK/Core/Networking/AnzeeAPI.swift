@@ -156,6 +156,10 @@ struct AnzeeAPI: API {
                 } else {
                     completionBlock(.failure(.requestError(err: err)))
                 }
+            } else if let jsonData = data, let errorResponse = try? JSONDecoder().decode(APIErrorResponse.self, from: jsonData) {
+                completionBlock(.failure(.apiError(response: errorResponse)))
+            } else if let httpResponse = response as? HTTPURLResponse, !(200..<300).contains(httpResponse.statusCode) {
+                completionBlock(.failure(.apiError(response: APIErrorResponse(status: 0, type: "Unexpected response", detail: ""))))
             } else if let jsonData = data {
                 completionBlock(.success(jsonData))
             } else {
