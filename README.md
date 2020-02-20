@@ -16,7 +16,7 @@ Run `bundle exec fastlane create_binary_framework` to build the Swift binary fra
 
 ### Retrieving SDK Key
 
-* Coming Soon
+* The Mailchimp SDK is currently in a private beta. If you'd like to join the beta send your Mailchimp username to [mobile-sdk@mailchimp.com](mailto:mobile-sdk@mailchimp.com?subject=I%27d%20like%20to%20join%20the%20Mailchimp%20SDK%20Private%20Beta).
 
 ### Adding the XCFramework
 
@@ -28,7 +28,7 @@ Click on the Project navigator, select your app’s target, go to the General ta
 
 The initialize method has three different fields.
 
-* SDK Key (Required): The SDK key gives you access to your audience.  Alpha: You’ll need to acquire an SDK key for the list being tested. Beta: Go to your developer portal to obtain your SDK key.
+* SDK Key (Required): The SDK key gives you access to your audience. The Mailchimp SDK is currently in a private beta. If you'd like to join the beta send your Mailchimp username to [mobile-sdk@mailchimp.com](mailto:mobile-sdk@mailchimp.com?subject=I%27d%20like%20to%20join%20the%20Mailchimp%20SDK%20Private%20Beta).
 * Debug Mode (Optional): Debug Mode enables additional debug only functionality such as extra logging. This is off by default.
 * Auto Tagging (Optional): Auto Tagging automatically tags contacts with information such as Device Type and Platform. This is on by default.
 
