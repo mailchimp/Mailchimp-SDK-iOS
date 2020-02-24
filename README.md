@@ -12,6 +12,7 @@ Run `bundle exec fastlane create_binary_framework` to build the Swift binary fra
 
 ### Requirements
 
+* Deployment target iOS 11.0 or above
 * Xcode version 11 or above
 * Ruby 2.4 or above (for fastlane)
 
