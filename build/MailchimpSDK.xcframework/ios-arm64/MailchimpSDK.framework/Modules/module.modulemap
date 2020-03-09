@@ -1,0 +1,11 @@
+framework module MailchimpSDK {
+  umbrella header "MailchimpSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module MailchimpSDK.Swift {
+    header "MailchimpSDK-Swift.h"
+    requires objc
+}

@@ -1,0 +1,417 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MailchimpSDK
+import Foundation
+@_exported import MailchimpSDK
+import Swift
+@objc public class ContactOperation : Foundation.Operation {
+  public var dataTask: Foundation.URLSessionDataTask?
+  @objc override dynamic public var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isExecuting: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isFinished: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public func start()
+  @objc override dynamic public func main()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class EventOperation : Foundation.Operation {
+  public var dataTask: Foundation.URLSessionDataTask?
+  @objc override dynamic public var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isExecuting: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public var isFinished: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic public func start()
+  @objc override dynamic public func main()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct APIErrorResponse : Swift.Codable {
+  public let status: Swift.Int
+  public let type: Swift.String
+  public let detail: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum APIError : Swift.Error {
+  case jsonParsingError(err: Swift.String)
+  case requestError(err: Swift.Error)
+  case requestTimeout
+  case apiInvalidURL
+  case apiError(response: APIErrorResponse)
+  case jsonMissingData
+  case jsonMissingResponseData
+  case jsonBoom
+}
+public typealias JSONHash = [Swift.String : Any]
+public struct Event : Swift.Codable {
+  public enum InitError : Swift.Error {
+    case invalid(Swift.String)
+  }
+  public var emailAddress: Swift.String
+  public var name: Swift.String
+  public var properties: [Swift.String : Swift.String]?
+  public init(emailAddress: Swift.String, name: Swift.String, properties: [Swift.String : Swift.String]?) throws
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Contact : Swift.Codable {
+  public var emailAddress: Swift.String
+  public var tags: [Contact.Tag]?
+  public var marketingPermissions: [Contact.MarketingPermission]?
+  public var mergeFields: [Swift.String : MergeFieldValue]?
+  public var status: Contact.Status?
+  public enum TagStatus : Swift.String, Swift.Codable {
+    case active
+    case inactive
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.String, Swift.Codable {
+    case subscribed
+    case transactional
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct Tag : Swift.Codable {
+    public let name: Swift.String
+    public let status: Contact.TagStatus
+    public init(name: Swift.String, status: Contact.TagStatus)
+    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  public struct MarketingPermission : Swift.Codable {
+    public let marketingPermissionId: Swift.String
+    public let enabled: Swift.Bool
+    public init(marketingPermissionId: Swift.String, enabled: Swift.Bool)
+    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: Swift.Encoder) throws
+  }
+  public init(emailAddress: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum MergeFieldValue : Swift.Codable {
+  case string(Swift.String)
+  case address(Address)
+}
+extension MergeFieldValue {
+  public init(string: Swift.String)
+  public init(address: Address)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct Address : Swift.Codable, Swift.Equatable {
+  public var addressLineOne: Swift.String
+  public var addressLineTwo: Swift.String?
+  public var city: Swift.String
+  public var state: Swift.String?
+  public var zipCode: Swift.String
+  public var country: CountryCode
+  public init(addressLineOne: Swift.String, addressLineTwo: Swift.String?, city: Swift.String, state: Swift.String?, zipCode: Swift.String, country: CountryCode)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public static func == (a: Address, b: Address) -> Swift.Bool
+}
+@objc public class MailchimpSDK : ObjectiveC.NSObject {
+  public enum InitError : Swift.Error {
+    case invalidToken(Swift.String)
+  }
+  public static var autoTagContacts: Swift.Bool
+  public static var debugMode: Swift.Bool
+  public static let version: Swift.String
+  public typealias RequestCallback = (Swift.Result<Foundation.Data, APIError>) -> Swift.Void
+  public class func initialize(token: Swift.String, autoTagContacts: Swift.Bool = true, debugMode: Swift.Bool = false) throws
+  @discardableResult
+  public class func createOrUpdate(contact: Contact, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: Address, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func setContactStatus(emailAddress: Swift.String, status: Contact.Status, result: RequestCallback? = nil) -> ContactOperation?
+  @discardableResult
+  public class func trackEventWithAttributes(event: Event, result: RequestCallback? = nil) -> EventOperation?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension URLRequest {
+  mutating public func addBasicAuthHeader(username: Swift.String, password: Swift.String?)
+}
+public enum CountryCode : Swift.String, Swift.Codable, Swift.CaseIterable {
+  case USA
+  case AalandIslands
+  case Afghanistan
+  case Albania
+  case Algeria
+  case AmericanSamoa
+  case Andorra
+  case Angola
+  case Anguilla
+  case AntiguaAndBarbuda
+  case Argentina
+  case Armenia
+  case Aruba
+  case Australia
+  case Austria
+  case Azerbaijan
+  case Bahamas
+  case Bahrain
+  case Bangladesh
+  case Barbados
+  case Belarus
+  case Belgium
+  case Belize
+  case Benin
+  case Bermuda
+  case Bhutan
+  case Bolivia
+  case BonaireSaintEustatiusandSaba
+  case BosniaandHerzegovina
+  case Botswana
+  case BouvetIsland
+  case Brazil
+  case BruneiDarussalam
+  case Bulgaria
+  case BurkinaFaso
+  case Burundi
+  case Cambodia
+  case Cameroon
+  case Canada
+  case CapeVerde
+  case CaymanIslands
+  case CentralAfricanRepublic
+  case Chad
+  case Chile
+  case China
+  case ChristmasIsland
+  case Colombia
+  case Comoros
+  case Congo
+  case CookIslands
+  case CostaRica
+  case CoteDIvoire
+  case Croatia
+  case Cuba
+  case Curacao
+  case Cyprus
+  case CzechRepublic
+  case DemocraticRepublicoftheCongo
+  case Denmark
+  case Djibouti
+  case Dominica
+  case DominicanRepublic
+  case Ecuador
+  case Egypt
+  case ElSalvador
+  case EquatorialGuinea
+  case Eritrea
+  case Estonia
+  case Ethiopia
+  case FalklandIslands
+  case FaroeIslands
+  case Fiji
+  case Finland
+  case France
+  case FrenchGuiana
+  case FrenchPolynesia
+  case Gabon
+  case Gambia
+  case Georgia
+  case Germany
+  case Ghana
+  case Gibraltar
+  case Greece
+  case Greenland
+  case Grenada
+  case Guadeloupe
+  case Guam
+  case Guatemala
+  case Guernsey
+  case Guinea
+  case Guyana
+  case Haiti
+  case Honduras
+  case HongKong
+  case Hungary
+  case Iceland
+  case India
+  case Indonesia
+  case Iran
+  case Iraq
+  case Ireland
+  case IsleofMan
+  case Israel
+  case Italy
+  case Jamaica
+  case Japan
+  case JerseyChannelIslands
+  case Jordan
+  case Kazakhstan
+  case Kenya
+  case Kiribati
+  case Kuwait
+  case Kyrgyzstan
+  case LaoPeoplesDemocraticRepublic
+  case Latvia
+  case Lebanon
+  case Lesotho
+  case Liberia
+  case Libya
+  case Liechtenstein
+  case Lithuania
+  case Luxembourg
+  case Macau
+  case Macedonia
+  case Madagascar
+  case Malawi
+  case Malaysia
+  case Maldives
+  case Mali
+  case Malta
+  case MarshallIslands
+  case Martinique
+  case Mauritania
+  case Mauritius
+  case Mayotte
+  case Mexico
+  case MoldovaRepublicof
+  case Monaco
+  case Mongolia
+  case Montenegro
+  case Montserrat
+  case Morocco
+  case Mozambique
+  case Myanmar
+  case Namibia
+  case Nepal
+  case Netherlands
+  case NetherlandsAntilles
+  case NewCaledonia
+  case NewZealand
+  case Nicaragua
+  case Niger
+  case Nigeria
+  case Niue
+  case NorfolkIsland
+  case NorthKorea
+  case Norway
+  case Oman
+  case Pakistan
+  case Palau
+  case Palestine
+  case Panama
+  case PapuaNewGuinea
+  case Paraguay
+  case Peru
+  case Philippines
+  case Pitcairn
+  case Poland
+  case Portugal
+  case Qatar
+  case RepublicofKosovo
+  case Reunion
+  case Romania
+  case Russia
+  case Rwanda
+  case SaintKittsandNevis
+  case SaintLucia
+  case SaintMartin
+  case SaintVincentandtheGrenadines
+  case SamoaIndependent
+  case SanMarino
+  case SaoTomeandPrincipe
+  case SaudiArabia
+  case Senegal
+  case Serbia
+  case Seychelles
+  case SierraLeone
+  case Singapore
+  case SintMaarten
+  case Slovakia
+  case Slovenia
+  case SolomonIslands
+  case Somalia
+  case SouthAfrica
+  case SouthGeorgiaandtheSouthSandwichIslands
+  case SouthKorea
+  case SouthSudan
+  case Spain
+  case SriLanka
+  case Sudan
+  case Suriname
+  case SvalbardandJanMayenIslands
+  case Swaziland
+  case Sweden
+  case Switzerland
+  case Syria
+  case Taiwan
+  case Tajikistan
+  case Tanzania
+  case Thailand
+  case TimorLeste
+  case Togo
+  case Tonga
+  case TrinidadandTobago
+  case Tunisia
+  case Turkey
+  case Turkmenistan
+  case TurksCaicosIslands
+  case Uganda
+  case Ukraine
+  case UnitedArabEmirates
+  case UnitedKingdom
+  case Uruguay
+  case Uzbekistan
+  case Vanuatu
+  case VaticanCityStateHolySee
+  case Venezuela
+  case Vietnam
+  case VirginIslandsBritish
+  case VirginIslandsUS
+  case WesternSahara
+  case Yemen
+  case Zambia
+  case Zimbabwe
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public typealias AllCases = [CountryCode]
+  public static var allCases: [CountryCode] {
+    get
+  }
+}
+extension Contact.TagStatus : Swift.Equatable {}
+extension Contact.TagStatus : Swift.Hashable {}
+extension Contact.TagStatus : Swift.RawRepresentable {}
+extension Contact.Status : Swift.Equatable {}
+extension Contact.Status : Swift.Hashable {}
+extension Contact.Status : Swift.RawRepresentable {}
+extension CountryCode : Swift.Hashable {}
+extension CountryCode : Swift.RawRepresentable {}

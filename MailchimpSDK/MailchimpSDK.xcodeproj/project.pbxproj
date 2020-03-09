@@ -109,10 +109,9 @@
 		B958969922774C0C00F7509B /* MailchimpSDK */ = {
 			isa = PBXGroup;
 			children = (
-				F221C0A5229321F30036D6C5 /* LocalData */,
+				B95896B222774CA100F7509B /* Core */,
 				B95896B122774C9A00F7509B /* SDK */,
 				F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */,
-				B95896B222774CA100F7509B /* Core */,
 				B958969A22774C0C00F7509B /* MailchimpSDK.h */,
 				B958969B22774C0C00F7509B /* Info.plist */,
 			);
@@ -205,13 +204,6 @@
 				BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */,
 			);
 			path = Operations;
-			sourceTree = "<group>";
-		};
-		F221C0A5229321F30036D6C5 /* LocalData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LocalData;
 			sourceTree = "<group>";
 		};
 		F2A2202F22984C4500F57058 /* Audience */ = {
@@ -519,6 +511,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -547,6 +540,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
