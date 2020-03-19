@@ -62,7 +62,7 @@ platform :ios do
   desc "Create a release candidate for a given version"
   lane :release do |args|
     # Check for version argument
-    version = args[:version] || ENV['MAILCHIMP_SDK_VERSION'] || branch_version
+    version = args[:version] || ENV['MAILCHIMP_SDK_VERSION'] || marketing_version
     if version.nil?
       UI.user_error! "Version not provided through argument, environment variable, or release branch name. Try running: `fastlane release version:MAJOR.MINOR.PATCH` or setting the environment variable named MAILCHIMP_SDK_VERSION, where MAJOR.MINOR.PATCH represents the version number."
     end
@@ -112,16 +112,6 @@ def output_path
   return ENV.fetch('BITRISE_DEPLOY_DIR', "../build")
 end
 
-def branch_version
-  # https://rubular.com/r/A8FeXBzT1z4zJR
-  version_regex = /^releases\/v(\d+\.\d+(\.\d+)*)$/
-
-  if matches = git_branch.match(version_regex)
-    version = matches.captures[0]
-    puts "Version: #{version}"
-    return version
-  else
-    puts "No version number found in \"#{git_branch}\""
-  end
-  return nil
+def marketing_version
+  get_version_number(xcodeproj: "MailchimpSDK/MailchimpSDK.xcodeproj")
 end
