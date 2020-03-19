@@ -32,7 +32,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B98206D022C50EA80082BBFA /* Mailchimp.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Mailchimp.xcframework; path = ../build/Mailchimp.xcframework; sourceTree = "<group>"; };
 		BF3EB6D823746E3D0075EF69 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		BF3EB6DC23746FC80075EF69 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		BF3EB6DE237492670075EF69 /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
@@ -120,7 +119,6 @@
 		F235669322B41F980064C041 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B98206D022C50EA80082BBFA /* Mailchimp.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
