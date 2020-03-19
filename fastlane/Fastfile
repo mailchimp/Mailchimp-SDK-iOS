@@ -19,7 +19,6 @@ default_platform(:ios)
 
 workspace_name = "MailchimpSDK.xcworkspace"
 sdk_scheme_name = "MailchimpSDK"
-sdk_project_path = "MailchimpSDK/MailchimpSDK.xcodeproj"
 build_path = "../build"
 deploy_path = "../deploy"
 device_archive_path = "#{build_path}/MailchimpDeviceSDK.xcarchive"
@@ -110,9 +109,9 @@ end
 
 def output_path
   # Use Bitrise Deploy Directory as output path if available
-  return ENV.fetch('BITRISE_DEPLOY_DIR', $build_path)
+  return ENV.fetch('BITRISE_DEPLOY_DIR', "../build")
 end
 
 def marketing_version
-  get_version_number(xcodeproj: $sdk_project_path)
+  get_version_number(xcodeproj: "MailchimpSDK/MailchimpSDK.xcodeproj")
 end
