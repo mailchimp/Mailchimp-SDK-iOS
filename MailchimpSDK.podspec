@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://mailchimp.com'
   s.social_media_url = 'https://twitter.com/mailchimp'
-  s.license          = { :type => 'Mailchimp Mobile Software Development Kit License Agreement', :file => 'LICENSE' }
+  s.license          = { :type => 'Custom', :file => 'LICENSE' }
 
   s.authors          = 'Mailchimp'
 
