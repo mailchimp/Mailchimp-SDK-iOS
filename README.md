@@ -4,9 +4,15 @@ The Mailchimp SDK is currently in a private beta. If you'd like to join the beta
 [<img width="250" height="119" src="https://developer.mailchimp.com/documentation/mailchimp/img/lockup.svg"/>](http://www.mailchimp.com)
 
 # MailchimpSDK-iOS
-MailchimpSDK for iOS
 
-Run `bundle exec fastlane create_binary_framework` to build the Swift binary framework for iOS and iOS Simulator.
+##### Table of Contents  
+[Getting Started](#getting-started)  
+[Installation](#installation)  
+[Initializing the SDK](#initializing-the-sdk)  
+[Collecting contact information](#collecting-contact-information)  
+[Contact Schema](#contact-schema)  
+[Collecting contact events](#collecting-contact-events)  
+[Event Schema](#event-schema)
 
 ## Getting Started
 
@@ -20,13 +26,23 @@ Run `bundle exec fastlane create_binary_framework` to build the Swift binary fra
 
 * The Mailchimp SDK is currently in a private beta. If you'd like to join the beta send your Mailchimp username to [mobile-sdk@mailchimp.com](mailto:mobile-sdk@mailchimp.com?subject=I%27d%20like%20to%20join%20the%20Mailchimp%20SDK%20Private%20Beta).
 
-### Adding the XCFramework
+## Installation
+### Option 1: Cocoapods
+For the latest version of our SDK, add the following to your project's Podfile:
+```
+pod 'MailchimpSDK'
+```
 
-Click on the Project navigator, select your app’s target, go to the General tab, scroll down to Frameworks, Libraries, and Embedded Content. Drag the Mailchimp.xcframework from this repo into this section.
+### Option 2: Manual
+1. Clone this repository
+2. Run `bundle exec fastlane create_binary_framework` to build the Swift binary framework for iOS and iOS Simulator.
+3. Add the XCFramework:
 
-![Drag the framework into Frameworks, Libraries, and Embedded Content](https://user-images.githubusercontent.com/42216769/69161161-8f641480-0a9f-11ea-93ec-5599aac85423.gif)
+  Click on the Project navigator, select your app’s target, go to the General tab, scroll down to Frameworks, Libraries, and Embedded Content. Drag the Mailchimp.xcframework from this repo into this section.
 
-### Initializing the SDK
+  ![Drag the framework into Frameworks, Libraries, and Embedded Content](https://user-images.githubusercontent.com/42216769/69161161-8f641480-0a9f-11ea-93ec-5599aac85423.gif)
+
+## Initializing the SDK
 
 The initialize method has three different fields.
 
@@ -35,7 +51,7 @@ The initialize method has three different fields.
 * Auto Tagging (Optional): Auto Tagging automatically tags contacts with information such as Device Type and Platform. This is on by default.
 
 ```swift
-    MailchimpSDK.initialize(token: sdkKey)
+MailchimpSDK.initialize(token: sdkKey)
 ```
 
 ## Collecting contact information
@@ -45,19 +61,19 @@ The initialize method has three different fields.
 To add a contact to your Mailchimp audience, first instantiate a new Contact struct. Then pass the contact into the `createOrUpdate()` method. This will add the contact to your Mailchimp audience with applied merge fields and/or tags. If the contact already exists, their information will be updated with the values that were passed in.
 
 ```swift
-    var contact: Contact = Contact(emailAddress: "example@email.com")
-    let mergeFields = ["FNAME": MergeFieldValue.string("Example"),
-                       "LNAME": MergeFieldValue.string("User")]
-    contact.mergeFields = mergeFields
-    contact.tags = [Contact.Tag(name: "mobile-signup", status: .active)]
-    MailchimpSDK.createOrUpdate(contact: contact) { result in
-        switch result {
-        case .success:
-            print("Successfully added or updated contact")
-        case .failure(let error):
-            print("Error: \(error.localizedDescription)")
-        }
+var contact: Contact = Contact(emailAddress: "example@email.com")
+let mergeFields = ["FNAME": MergeFieldValue.string("Example"),
+                   "LNAME": MergeFieldValue.string("User")]
+contact.mergeFields = mergeFields
+contact.tags = [Contact.Tag(name: "mobile-signup", status: .active)]
+MailchimpSDK.createOrUpdate(contact: contact) { result in
+    switch result {
+    case .success:
+        print("Successfully added or updated contact")
+    case .failure(let error):
+        print("Error: \(error.localizedDescription)")
     }
+}
 ```
 
 ### Updating a Contact
@@ -77,40 +93,40 @@ Single field update methods include
 ### Add/Remove Tags
 
 ```swift
-     MailchimpSDK.addTag(name: tagName,
-                         emailAddress: "example@email.com") { result in
-                         switch result {
-                         case .success:
-                             print("Successfully added tag: \(tagName)")
-                         case .failure(let error):
-                             print("Error: \(error.localizedDescription)")
-                         }
-                     }
+MailchimpSDK.addTag(name: tagName,
+                   emailAddress: "example@email.com") { result in
+                   switch result {
+                   case .success:
+                       print("Successfully added tag: \(tagName)")
+                   case .failure(let error):
+                       print("Error: \(error.localizedDescription)")
+                   }
+               }
 
-     MailchimpSDK.removeTag(name: tagName,
-                            emailAddress: "example@email.com") { result in
-                            switch result {
-                            case .success:
-                               print("Successfully removed tag: \(tagName)")
-                            case .failure(let error):
-                               print("Error: \(error.localizedDescription)")
-                            }
-                     }
+MailchimpSDK.removeTag(name: tagName,
+                      emailAddress: "example@email.com") { result in
+                      switch result {
+                      case .success:
+                         print("Successfully removed tag: \(tagName)")
+                      case .failure(let error):
+                         print("Error: \(error.localizedDescription)")
+                      }
+               }
 ```
 
 ### Set Merge Fields
 
 ```swift
-     MailchimpSDK.setMergeField(emailAddress: "example@email.com",
-                                name: fieldName,
-                                value: fieldValue) { result in
-                                switch result {
-                                case .success:
-                                     print("Successfully added merge field: \(fieldName), \(fieldValue)")
-                                case .failure(let error):
-                                     print("Error: \(error.localizedDescription)")
-                                }
-                     }
+MailchimpSDK.setMergeField(emailAddress: "example@email.com",
+                          name: fieldName,
+                          value: fieldValue) { result in
+                          switch result {
+                          case .success:
+                               print("Successfully added merge field: \(fieldName), \(fieldValue)")
+                          case .failure(let error):
+                               print("Error: \(error.localizedDescription)")
+                          }
+               }
 ```
 ## Contact Schema
 
@@ -142,12 +158,12 @@ Merge Fields of type address are represented as an Address struct. Addresses hav
 In addition there are three optional fields, Address Line Two, State, and Country. Below is an example of an Address object.
 
 ```swift
-    let address = Address(addressLineOne: "123 Chimp St.",
-                          addressLineTwo: "Suite 456",
-                          city: "Atlanta",
-                          state: "GA",
-                          zipCode: "30308",
-                          country: CountryCode.USA)
+let address = Address(addressLineOne: "123 Chimp St.",
+                      addressLineTwo: "Suite 456",
+                      city: "Atlanta",
+                      state: "GA",
+                      zipCode: "30308",
+                      country: CountryCode.USA)
 ```
 
 ### Contact Status
@@ -162,7 +178,7 @@ Appropriate marketing permissions need to be set to communicate with any contact
 Marketing permissions are set by instantiating a MarketingPermission struct with the corresponding `marketingPermissionsId` and setting `enabled` if the user granted permission for that permission ID.
 
 ```swift
-    let permission1 = Contact.MarketingPermission(marketingPermissionId: "permission1", enabled: true)
+let permission1 = Contact.MarketingPermission(marketingPermissionId: "permission1", enabled: true)
 ```
 
 ## Collecting contact events
@@ -172,15 +188,15 @@ Marketing permissions are set by instantiating a MarketingPermission struct with
 To add an event associated with a contact, first instantiate a new Event struct. Then pass the event into the `trackEventWithAttributes()` method. This will add the event to the specified contact.
 
 ```swift
-    let event: Event = try! Event(emailAddress: "example@email.com", name: "signup", properties: ["source": "iOS"])
-    MailchimpSDK.trackEventWithAttributes(event: event) { result in
-        switch result {
-        case .success:
-            print("Successfully tracked an event")
-        case .failure(let error):
-            print("Error: \(error.localizedDescription)")
-        }
+let event: Event = try! Event(emailAddress: "example@email.com", name: "signup", properties: ["source": "iOS"])
+MailchimpSDK.trackEventWithAttributes(event: event) { result in
+    switch result {
+    case .success:
+        print("Successfully tracked an event")
+    case .failure(let error):
+        print("Error: \(error.localizedDescription)")
     }
+}
 ```
 
 ## Event Schema
