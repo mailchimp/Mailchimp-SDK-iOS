@@ -140,9 +140,8 @@ desc "Sets the SDK version in all files"
 
         finished = false
         while(!finished)
-          UI.important "[ATTENTION] Do NOT include the `-` prefix in your entry."
           entry = prompt(text: "Type your entry for `#{type}`: ")
-          entry = "- " + entry # Attach the - prefix
+          entry = '- ' + entry unless entry.start_with?('-') # Attach the - prefix if needed
           changelog_changes << entry # Add line to total changes
 
           additional_input = prompt(text: "Any additional entries for `#{type}`?", boolean: true)
