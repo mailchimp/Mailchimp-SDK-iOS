@@ -34,7 +34,6 @@ changelog_path = "../Changelog.md"
 readme_path = "../README.md"
 license_path = "../LICENSE"
 change_types = ["Added", "Changed", "Deprecated", "Removed", "Fixed", "Security"]
-yes_input = "y"
 changelog_insertion_line = 6
 
 platform :ios do
@@ -112,7 +111,7 @@ platform :ios do
 desc "Sets the SDK version in all files"
   lane :set_version do
     UI.important "[ATTENTION] Version number should be MAJOR.MINOR.PATCH, do NOT include the `v` prefix."
-    version = UI.input "Enter version number:"
+    version = prompt(text: "Enter version number:")
 
     # Set MARKETING_VERSION using `versioning` plugin
     increment_version_number_in_xcodeproj(
@@ -127,33 +126,32 @@ desc "Sets the SDK version in all files"
     UI.important "You will now update the Changelog. You will be prompted to add entries for any of the available change types. See https://keepachangelog.com/en/1.0.0/ for format."
 
     today = DateTime.now.strftime("%Y-%m-%d")
-    changelog_changes = "## [#{version}] - #{today}\n"
+    changelog_changes = ["## [#{version}] - #{today}"]
     included_change_type_index = 0 # For keeping track of which change types we include to format empty lines correctly
 
     change_types.each { |type|
-      input = UI.input "Include entry for `#{type}`? (y/n)"
-      if (input.casecmp?(yes_input))
-
+      input = prompt(text: "Include entry for `#{type}`?", boolean: true)
+      if (input)
         if (included_change_type_index > 0)
-          changelog_changes += "\n" # Add an extra line between change type sections
+          changelog_changes << "" # Add an extra line between change type sections
         end
 
         included_change_type_index += 1
-        changelog_changes += "### #{type}\n" # Add change type title
+        changelog_changes << "### #{type}" # Add change type title
 
         finished = false
         while(!finished)
           UI.important "[ATTENTION] Do NOT include the `-` prefix in your entry."
-          entry = UI.input "Type your entry for `#{type}`:"
-          entry = "- " + entry + "\n" # Attach the - prefix
-          changelog_changes += entry # Add line to total changes
+          entry = prompt(text: "Type your entry for `#{type}`: ")
+          entry = "- " + entry # Attach the - prefix
+          changelog_changes << entry # Add line to total changes
 
-          additional_input = UI.input "Any additional entries for `#{type}`?"
-          finished = !additional_input.casecmp?(yes_input) # If additional entries is true, we are NOT finished
+          additional_input = prompt(text: "Any additional entries for `#{type}`?", boolean: true)
+          finished = !additional_input # If additional entries is true, we are NOT finished
         end
       end
     }
-    changelog_changes += "\n" # Add a trailing new line to separate from previous sections
+    changelog_changes << "" # Add a trailing new line to separate from previous sections
 
     changelog_lines = File.open(changelog_path).readlines
     changelog_lines.insert(changelog_insertion_line, changelog_changes) # Insert the changes
