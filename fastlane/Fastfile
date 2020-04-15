@@ -110,8 +110,7 @@ platform :ios do
 
 desc "Sets the SDK version in all files"
   lane :set_version do
-    UI.important "[ATTENTION] Version number should be MAJOR.MINOR.PATCH, do NOT include the `v` prefix."
-    version = prompt(text: "Enter version number:")
+    version = prompt(text: "Enter version number:").gsub(/^v/, '')
 
     # Set MARKETING_VERSION using `versioning` plugin
     increment_version_number_in_xcodeproj(
