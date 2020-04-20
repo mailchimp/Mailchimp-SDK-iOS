@@ -33,7 +33,7 @@ deploy_zip = "Mailchimp-SDK-iOS.zip"
 changelog_path = "../Changelog.md"
 readme_path = "../README.md"
 license_path = "../LICENSE"
-change_types = ["Added", "Changed", "Deprecated", "Removed", "Fixed", "Security"]
+change_types = %w(Added Changed Deprecated Removed Fixed Security)
 changelog_insertion_line = 6
 
 platform :ios do
