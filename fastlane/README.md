@@ -35,12 +35,17 @@ Create Swift Binary Framework
 ```
 fastlane ios release
 ```
-Create a release candidate for a given version
+Create a release candidate
 ### ios clean
 ```
 fastlane ios clean
 ```
 Clean deploy artifacts
+### ios set_version
+```
+fastlane ios set_version
+```
+Sets the SDK version in all files
 
 ----
 
