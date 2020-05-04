@@ -1,6 +1,3 @@
-# Interested in joining our beta?
-The Mailchimp SDK is currently in a private beta. If you'd like to join the beta send your Mailchimp username to [mobile-sdk@mailchimp.com](mailto:mobile-sdk@mailchimp.com?subject=I%27d%20like%20to%20join%20the%20Mailchimp%20SDK%20Private%20Beta).
-
 [<img width="250" height="119" src="https://developer.mailchimp.com/documentation/mailchimp/img/lockup.svg"/>](http://www.mailchimp.com)
 
 # MailchimpSDK-iOS
@@ -24,7 +21,7 @@ The Mailchimp SDK is currently in a private beta. If you'd like to join the beta
 
 ### Retrieving SDK Key
 
-* The Mailchimp SDK is currently in a private beta. If you'd like to join the beta send your Mailchimp username to [mobile-sdk@mailchimp.com](mailto:mobile-sdk@mailchimp.com?subject=I%27d%20like%20to%20join%20the%20Mailchimp%20SDK%20Private%20Beta).
+* See the [Mailchimp SDK documentation](https://github.com/mailchimp/Mailchimp-SDK-iOS#retrieving-sdk-key) for details on retrieving the key.
 
 ## Installation
 ### Option 1: Cocoapods
@@ -46,7 +43,7 @@ pod 'MailchimpSDK'
 
 The initialize method has three different fields.
 
-* SDK Key (Required): The SDK key gives you access to your audience. The Mailchimp SDK is currently in a private beta. If you'd like to join the beta send your Mailchimp username to [mobile-sdk@mailchimp.com](mailto:mobile-sdk@mailchimp.com?subject=I%27d%20like%20to%20join%20the%20Mailchimp%20SDK%20Private%20Beta).
+* SDK Key (Required): The SDK key gives you access to your audience.
 * Debug Mode (Optional): Debug Mode enables additional debug only functionality such as extra logging. This is off by default.
 * Auto Tagging (Optional): Auto Tagging automatically tags contacts with information such as Device Type and Platform. This is on by default.
 
