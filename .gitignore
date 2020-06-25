@@ -17,3 +17,15 @@ DerivedData
 IDEWorkspaceChecks.plist
 
 .DS_Store
+
+# fastlane
+#
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/README.md
+**/fastlane/report.xml
+**/fastlane/test_output
+**/fastlane/code_coverage_output
