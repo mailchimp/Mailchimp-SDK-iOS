@@ -5,13 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.0] - 2020-07-20
-### Changed
-- Bump version to 1.0
+### Added
 
 ## [0.1.6] - 2020-06-25
 ### Changed
-- Updated documentation and README
-- Updated .gitignore
+- Bump version to 1.0
 
 ## [0.1.5] - 2020-04-14
 ### Added
