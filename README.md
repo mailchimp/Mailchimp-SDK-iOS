@@ -168,6 +168,12 @@ let address = Address(addressLineOne: "123 Chimp St.",
 The Contact Status represents what type of communication the user has consented to. This can either be Subscribed (will receive general marketing campaigns) or Transactional (will only receive transactional emails).
 This value can only be set when the contact is created. If this is set at any other time, the new value will be ignored. By default all users will be marked as transactional if this value is not set at creation.
 
+You can subscribe a new contact to general marketing campaigns by setting `status`.
+
+```swift
+contact.status = .subscribed
+```
+
 ### Marketing Permissions
 
 Appropriate marketing permissions need to be set to communicate with any contact/s added to an audience with GDPR enabled fields. These fields specify how a contact would like their information to be used (ex: for direct mail or for customized online advertising).
