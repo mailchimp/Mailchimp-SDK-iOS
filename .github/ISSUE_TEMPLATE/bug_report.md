@@ -27,7 +27,7 @@ If applicable, add screenshots to help explain your problem.
  - iOS Deployment Target (Deployment Info > Target > iOS version): [e.g. iOS 10.0]
  - Mailchimp SDK Version: [e.g. 1.0]
 
-**Podile contents**
+**Podfile contents**
 If using Cocoapods to integrate the SDK into your project, please paste the contents of your Podfile below. Please redact any private information.
 
 **Additional context**
