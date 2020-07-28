@@ -108,7 +108,7 @@ platform :ios do
     FileUtils.remove_file("../#{deploy_zip}", force = true)
   end
 
-desc "Sets the SDK version in all files"
+  desc "Sets the SDK version in all files"
   lane :set_version do
     version = prompt(text: "Enter version number:").gsub(/^v/, '')
 
@@ -161,6 +161,12 @@ desc "Sets the SDK version in all files"
 
     UI.message "#{changelog_path} has been updated."
   end
+
+  desc "Pushes our Podspec up to Cocoapods"
+  lane :push_podspec do
+    pod_push(path: "MailchimpSDK.podspec")
+  end
+
 end
 
 def output_path
