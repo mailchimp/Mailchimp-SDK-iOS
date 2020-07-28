@@ -12,7 +12,7 @@ Install _fastlane_ using
 ```
 [sudo] gem install fastlane -NV
 ```
-or alternatively using `brew cask install fastlane`
+or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
@@ -46,6 +46,11 @@ Clean deploy artifacts
 fastlane ios set_version
 ```
 Sets the SDK version in all files
+### ios push_podspec
+```
+fastlane ios push_podspec
+```
+Pushes our Podspec up to Cocoapods
 
 ----
 
