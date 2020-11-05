@@ -61,6 +61,7 @@ To add a contact to your Mailchimp audience, first instantiate a new Contact str
 var contact: Contact = Contact(emailAddress: "example@email.com")
 let mergeFields = ["FNAME": MergeFieldValue.string("Example"),
                    "LNAME": MergeFieldValue.string("User")]
+contact.status = .subscribed
 contact.mergeFields = mergeFields
 contact.tags = [Contact.Tag(name: "mobile-signup", status: .active)]
 MailchimpSDK.createOrUpdate(contact: contact) { result in
