@@ -25,7 +25,7 @@
 
 ### Retrieving SDK Key
 
-* See the [Mailchimp SDK documentation](https://github.com/mailchimp/Mailchimp-SDK-iOS#retrieving-sdk-key) for details on retrieving the key.
+* See the [Mailchimp SDK documentation](https://mailchimp.com/developer/guides/mobile-sdk-ios/#Step_1._Retrieve_the_SDK_Key) for details on retrieving the key.
 
 ## Installation
 ### Option 1: Cocoapods
@@ -65,6 +65,7 @@ To add a contact to your Mailchimp audience, first instantiate a new Contact str
 var contact: Contact = Contact(emailAddress: "example@email.com")
 let mergeFields = ["FNAME": MergeFieldValue.string("Example"),
                    "LNAME": MergeFieldValue.string("User")]
+contact.status = .subscribed
 contact.mergeFields = mergeFields
 contact.tags = [Contact.Tag(name: "mobile-signup", status: .active)]
 MailchimpSDK.createOrUpdate(contact: contact) { result in
