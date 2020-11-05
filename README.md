@@ -21,7 +21,7 @@
 
 ### Retrieving SDK Key
 
-* See the [Mailchimp SDK documentation](https://github.com/mailchimp/Mailchimp-SDK-iOS#retrieving-sdk-key) for details on retrieving the key.
+* See the [Mailchimp SDK documentation](https://mailchimp.com/developer/guides/mobile-sdk-ios/#Step_1._Retrieve_the_SDK_Key) for details on retrieving the key.
 
 ## Installation
 ### Option 1: Cocoapods
