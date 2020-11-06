@@ -1,6 +1,6 @@
 //
 //  MergeField.swift
-//  Mailchimp SDK
+//  MailchimpSDK
 //
 //  Created by Chez Browne on 5/21/19.
 //  Copyright 2019 The Rocket Science Group LLC

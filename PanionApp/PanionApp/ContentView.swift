@@ -50,11 +50,11 @@ struct ContentView : View {
                         }
                         Button("Start") {
                             do {
-                                try MailchimpSDK.initialize(token: self.apiKey,
+                                try Mailchimp.initialize(token: self.apiKey,
                                                         autoTagContacts: self.autoTag,
                                                         debugMode: self.debugMode)
                                 self.showCreateView = true
-                            } catch MailchimpSDK.InitError.invalidToken {
+                            } catch Mailchimp.InitError.invalidToken {
                                 self.showingTokenAlert = true
                                 self.showCreateView = false
                             } catch {

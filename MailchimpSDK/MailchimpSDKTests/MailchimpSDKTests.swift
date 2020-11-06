@@ -25,7 +25,7 @@ class MailchimpSDKTests: XCTestCase {
     var timeout: TimeInterval = 10
     
     override func setUp() {
-        try? MailchimpSDK.initialize(token: token)
+        try? Mailchimp.initialize(token: token)
     }
     
     func testContactRequest() {
@@ -55,11 +55,11 @@ class MailchimpSDKTests: XCTestCase {
     
     func testSDKInitialize() {
         do {
-            try MailchimpSDK.initialize(token: "atesttoken-us1")
+            try Mailchimp.initialize(token: "atesttoken-us1")
         } catch {
             XCTFail("MailchimpSDK cannot be initialized with the token: \(token)")
         }
-        XCTAssertNotNil(MailchimpSDK.api)
+        XCTAssertNotNil(Mailchimp.api)
     }
     
     func testEventRequest() {
@@ -128,16 +128,16 @@ class MailchimpSDKTests: XCTestCase {
     }
 
     func testAutotagging() {
-        XCTAssertTrue(MailchimpSDK.autoTagContacts) // Defaults to true
+        XCTAssertTrue(Mailchimp.autoTagContacts) // Defaults to true
 
         // Use mock API
         let mockApi = MockAnzeeAPI()
-        MailchimpSDK.api = mockApi
+        Mailchimp.api = mockApi
 
         // Test the postBody has the expected tags per platform
         let contact: Contact = Contact(emailAddress: "test@mailchimp.com")
         
-        let operation = MailchimpSDK.createOrUpdate(contact: contact)
+        let operation = Mailchimp.createOrUpdate(contact: contact)
         operation?.main()
 
         guard let request = operation?.request else {
@@ -166,8 +166,8 @@ class MailchimpSDKTests: XCTestCase {
 
 
         // Test the postBody does not have tags
-        MailchimpSDK.autoTagContacts = false
-        MailchimpSDK.createOrUpdate(contact: contact)
+        Mailchimp.autoTagContacts = false
+        Mailchimp.createOrUpdate(contact: contact)
 
         guard let noTagRequest = mockApi.contactRequest else {
             XCTFail()
@@ -183,14 +183,14 @@ class MailchimpSDKTests: XCTestCase {
             XCTFail()
         }
 
-        MailchimpSDK.autoTagContacts = true // Reset value to default
+        Mailchimp.autoTagContacts = true // Reset value to default
     }
 
     // Many of these are tested in other tests, but this tests properties on the public interface for breaking changes
     func testPublicInterface() {
-        XCTAssertFalse(MailchimpSDK.debugMode)
-        XCTAssertTrue(MailchimpSDK.autoTagContacts)
-        XCTAssertNotNil(MailchimpSDK.version)
-        XCTAssertNotNil(MailchimpSDK.api) // This is not nil because the setUp calls initialize()
+        XCTAssertFalse(Mailchimp.debugMode)
+        XCTAssertTrue(Mailchimp.autoTagContacts)
+        XCTAssertNotNil(Mailchimp.version)
+        XCTAssertNotNil(Mailchimp.api) // This is not nil because the setUp calls initialize()
     }
 }

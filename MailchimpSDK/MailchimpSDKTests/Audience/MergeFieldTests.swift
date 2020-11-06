@@ -1,6 +1,6 @@
 //
-//  AudienceTests.swift
-//  Mailchimp SDKTests
+//  MergeFieldTests.swift
+//  MailchimpSDKTests
 //
 //  Created by Chez Browne on 5/24/19.
 //  Copyright 2019 The Rocket Science Group LLC
@@ -23,7 +23,7 @@ class MergeFieldTests: XCTestCase {
     var token = "PUT YOUR API TOKEN HERE"
     
     override func setUp() {
-        try? MailchimpSDK.initialize(token: token)
+        try? Mailchimp.initialize(token: token)
     }
 
     func testMergeFields() {
@@ -45,7 +45,7 @@ class MergeFieldTests: XCTestCase {
     
     func testCustomMergeFieldString() {
         let mockApi = MockAnzeeAPI()
-        MailchimpSDK.api = mockApi
+        Mailchimp.api = mockApi
         
         mockApi.verifyRequest = { request in
             guard let contact = request?.contact else {
@@ -72,12 +72,12 @@ class MergeFieldTests: XCTestCase {
         
         let fieldName = "Genre"
         let favoriteGenre = "Action"
-        MailchimpSDK.setMergeField(emailAddress: "test@mailchimp.com", name: fieldName, value: favoriteGenre)
+        Mailchimp.setMergeField(emailAddress: "test@mailchimp.com", name: fieldName, value: favoriteGenre)
     }
     
     func testCustomMergeFieldAddress() {
         let mockApi = MockAnzeeAPI()
-        MailchimpSDK.api = mockApi
+        Mailchimp.api = mockApi
         
         mockApi.verifyRequest = { request in
             guard let contact = request?.contact else {
@@ -115,7 +115,7 @@ class MergeFieldTests: XCTestCase {
                               state: "GA",
                               zipCode: "30308",
                               country: CountryCode.USA)
-        MailchimpSDK.setMergeField(emailAddress: "test@mailchimp.com", name: fieldName, address: address)
+        Mailchimp.setMergeField(emailAddress: "test@mailchimp.com", name: fieldName, address: address)
     }
     
     // MockAnzeeAPI in a class since it's self-mutating

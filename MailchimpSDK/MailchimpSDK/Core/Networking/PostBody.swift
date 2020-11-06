@@ -1,6 +1,6 @@
 //
 //  PostBody.swift
-//  Mailchimp SDK
+//  MailchimpSDK
 //
 //  Created by Michael Patzer on 5/7/19.
 //  Copyright 2019 The Rocket Science Group LLC

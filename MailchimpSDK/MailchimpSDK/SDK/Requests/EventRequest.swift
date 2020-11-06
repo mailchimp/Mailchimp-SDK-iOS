@@ -25,10 +25,10 @@ struct EventRequest: APIRequest {
     var apiPath: String { return "clientapi/1.0/contacts/events" }
     
     /// Callback once API request is complete.
-    public var callback: MailchimpSDK.RequestCallback?
+    public var callback: Mailchimp.RequestCallback?
     
     
-    init(event: Event, _ callback: MailchimpSDK.RequestCallback? = nil) {
+    init(event: Event, _ callback: Mailchimp.RequestCallback? = nil) {
         self.event = event
         self.callback = callback
     }
@@ -38,7 +38,7 @@ struct EventRequest: APIRequest {
     }
     
     func headers() -> [String : String]? {
-        return ["Mailchimp-SDK-Version": MailchimpSDK.version, "Mailchimp-SDK-Platform": "iOS"]
+        return ["Mailchimp-SDK-Version": Mailchimp.version, "Mailchimp-SDK-Platform": "iOS"]
     }
     
     func httpVerb() -> HTTPVerb {

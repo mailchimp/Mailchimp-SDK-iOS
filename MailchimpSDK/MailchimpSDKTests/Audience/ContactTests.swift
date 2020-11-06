@@ -23,7 +23,7 @@ class ContactTests: XCTestCase {
     var token = "PUT YOUR API TOKEN HERE"
     
     override func setUp() {
-        try? MailchimpSDK.initialize(token: token)
+        try? Mailchimp.initialize(token: token)
     }
     
     func testContactStatus() {
@@ -37,7 +37,7 @@ class ContactTests: XCTestCase {
     
     func testSetContactStatus() {
         let mockApi = MockAnzeeAPI()
-        MailchimpSDK.api = mockApi
+        Mailchimp.api = mockApi
         let testEmailAddress = "test@mailchimp.com"
         let testStatus = Contact.Status.subscribed
 
@@ -56,7 +56,7 @@ class ContactTests: XCTestCase {
             
             XCTAssertEqual(Contact.Status.subscribed, status)
         }
-        MailchimpSDK.setContactStatus(emailAddress: testEmailAddress, status: testStatus)
+        Mailchimp.setContactStatus(emailAddress: testEmailAddress, status: testStatus)
     }
     
     func testMarketingPermissions() {

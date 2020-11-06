@@ -26,7 +26,7 @@
 		BFF30D7F2371FB3D005FAABC /* ContactOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */; };
 		F239C3FD229F2DDF00FB85C3 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */; };
 		F26745E522F89DAC00AD1E93 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26745E422F89DAC00AD1E93 /* ContactTests.swift */; };
-		F288D79E2289BBD7004CB563 /* MailchimpSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */; };
+		F288D79E2289BBD7004CB563 /* Mailchimp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288D79D2289BBD7004CB563 /* Mailchimp.swift */; };
 		F2A2203122984C7600F57058 /* MergeFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2203022984C7600F57058 /* MergeFieldTests.swift */; };
 		F2AFC4D022947FFB006C742B /* MergeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFC4CF22947FFB006C742B /* MergeField.swift */; };
 /* End PBXBuildFile section */
@@ -64,7 +64,7 @@
 		BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOperation.swift; sourceTree = "<group>"; };
 		F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
 		F26745E422F89DAC00AD1E93 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
-		F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MailchimpSDK.swift; path = SDK/MailchimpSDK.swift; sourceTree = "<group>"; };
+		F288D79D2289BBD7004CB563 /* Mailchimp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mailchimp.swift; path = SDK/Mailchimp.swift; sourceTree = "<group>"; };
 		F2A2203022984C7600F57058 /* MergeFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeFieldTests.swift; sourceTree = "<group>"; };
 		F2AFC4CF22947FFB006C742B /* MergeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +111,7 @@
 			children = (
 				B95896B222774CA100F7509B /* Core */,
 				B95896B122774C9A00F7509B /* SDK */,
-				F288D79D2289BBD7004CB563 /* MailchimpSDK.swift */,
+				F288D79D2289BBD7004CB563 /* Mailchimp.swift */,
 				B958969A22774C0C00F7509B /* MailchimpSDK.h */,
 				B958969B22774C0C00F7509B /* Info.plist */,
 			);
@@ -336,7 +336,7 @@
 				B95896CA2280BA8700F7509B /* ContactRequest.swift in Sources */,
 				F2AFC4D022947FFB006C742B /* MergeField.swift in Sources */,
 				B95896D02281FD2D00F7509B /* PostBody.swift in Sources */,
-				F288D79E2289BBD7004CB563 /* MailchimpSDK.swift in Sources */,
+				F288D79E2289BBD7004CB563 /* Mailchimp.swift in Sources */,
 				BFD503FB2369DA4500939748 /* EventRequest.swift in Sources */,
 				B95896BD227768AB00F7509B /* APIRequest.swift in Sources */,
 				B95896B82277689F00F7509B /* URLRequest.swift in Sources */,
@@ -511,7 +511,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -540,7 +540,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -560,7 +560,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.Mailchimp-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -579,7 +579,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.Mailchimp-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

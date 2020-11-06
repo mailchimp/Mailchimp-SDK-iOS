@@ -1,6 +1,6 @@
 //
-//  MailchimpSDK.swift
-//  Mailchimp SDK
+//  Mailchimp.swift
+//  MailchimpSDK
 //
 //  Created by Chez Browne on 5/13/19.
 //  Copyright 2019 The Rocket Science Group LLC
@@ -18,8 +18,7 @@
 import Foundation
 
 /// Provides an interface for storing user behavior in Mailchimp
-///
-public class MailchimpSDK: NSObject {
+public class Mailchimp: NSObject {
     public enum InitError: Error { case invalidToken(String) }
     
     /// Automatically tags contacts with basic device information when created or updated. On by default.
@@ -51,8 +50,8 @@ public class MailchimpSDK: NSObject {
         }
         
         api = AnzeeAPI(token: token)
-        MailchimpSDK.autoTagContacts = autoTagContacts
-        MailchimpSDK.debugMode = debugMode
+        Mailchimp.autoTagContacts = autoTagContacts
+        Mailchimp.debugMode = debugMode
 
         if debugMode {
             print("Mailchimp SDK Initialized. Version: \(version)")

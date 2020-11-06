@@ -1,10 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MailchimpSDK
 import Foundation
 @_exported import MailchimpSDK
 import Swift
-@objc public class ContactOperation : Foundation.Operation {
+@objc @_hasMissingDesignatedInitializers public class ContactOperation : Foundation.Operation {
   public var dataTask: Foundation.URLSessionDataTask?
   @objc override dynamic public var isAsynchronous: Swift.Bool {
     @objc get
@@ -17,10 +17,10 @@ import Swift
   }
   @objc override dynamic public func start()
   @objc override dynamic public func main()
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
-@objc public class EventOperation : Foundation.Operation {
+@objc @_hasMissingDesignatedInitializers public class EventOperation : Foundation.Operation {
   public var dataTask: Foundation.URLSessionDataTask?
   @objc override dynamic public var isAsynchronous: Swift.Bool {
     @objc get
@@ -33,8 +33,8 @@ import Swift
   }
   @objc override dynamic public func start()
   @objc override dynamic public func main()
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 public struct APIErrorResponse : Swift.Codable {
   public let status: Swift.Int
@@ -129,7 +129,7 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public func encode(to encoder: Swift.Encoder) throws
   public static func == (a: Address, b: Address) -> Swift.Bool
 }
-@objc public class MailchimpSDK : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers public class Mailchimp : ObjectiveC.NSObject {
   public enum InitError : Swift.Error {
     case invalidToken(Swift.String)
   }
@@ -139,28 +139,28 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public typealias RequestCallback = (Swift.Result<Foundation.Data, APIError>) -> Swift.Void
   public class func initialize(token: Swift.String, autoTagContacts: Swift.Bool = true, debugMode: Swift.Bool = false) throws
   @discardableResult
-  public class func createOrUpdate(contact: Contact, result: RequestCallback? = nil) -> ContactOperation?
+  public class func createOrUpdate(contact: Contact, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: RequestCallback? = nil) -> ContactOperation?
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: Address, result: RequestCallback? = nil) -> ContactOperation?
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: Address, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func setContactStatus(emailAddress: Swift.String, status: Contact.Status, result: RequestCallback? = nil) -> ContactOperation?
+  public class func setContactStatus(emailAddress: Swift.String, status: Contact.Status, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func trackEventWithAttributes(event: Event, result: RequestCallback? = nil) -> EventOperation?
-  @objc override dynamic public init()
+  public class func trackEventWithAttributes(event: Event, result: Mailchimp.RequestCallback? = nil) -> EventOperation?
   @objc deinit
+  @objc override dynamic public init()
 }
 extension URLRequest {
-  mutating public func addBasicAuthHeader(username: Swift.String, password: Swift.String?)
+  public mutating func addBasicAuthHeader(username: Swift.String, password: Swift.String?)
 }
 public enum CountryCode : Swift.String, Swift.Codable, Swift.CaseIterable {
   case USA
@@ -413,5 +413,6 @@ extension Contact.TagStatus : Swift.RawRepresentable {}
 extension Contact.Status : Swift.Equatable {}
 extension Contact.Status : Swift.Hashable {}
 extension Contact.Status : Swift.RawRepresentable {}
+extension CountryCode : Swift.Equatable {}
 extension CountryCode : Swift.Hashable {}
 extension CountryCode : Swift.RawRepresentable {}
