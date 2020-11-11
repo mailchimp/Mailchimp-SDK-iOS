@@ -1,10 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
-// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MailchimpSDK
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MailchimpSDK
 import Foundation
 @_exported import MailchimpSDK
 import Swift
-@objc public class ContactOperation : Foundation.Operation {
+@objc @_hasMissingDesignatedInitializers public class ContactOperation : Foundation.Operation {
   public var dataTask: Foundation.URLSessionDataTask?
   @objc override dynamic public var isAsynchronous: Swift.Bool {
     @objc get
@@ -17,10 +17,10 @@ import Swift
   }
   @objc override dynamic public func start()
   @objc override dynamic public func main()
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
-@objc public class EventOperation : Foundation.Operation {
+@objc @_hasMissingDesignatedInitializers public class EventOperation : Foundation.Operation {
   public var dataTask: Foundation.URLSessionDataTask?
   @objc override dynamic public var isAsynchronous: Swift.Bool {
     @objc get
@@ -33,8 +33,8 @@ import Swift
   }
   @objc override dynamic public func start()
   @objc override dynamic public func main()
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 public struct APIErrorResponse : Swift.Codable {
   public let status: Swift.Int
@@ -129,7 +129,7 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public func encode(to encoder: Swift.Encoder) throws
   public static func == (a: MailchimpSDK.Address, b: MailchimpSDK.Address) -> Swift.Bool
 }
-@objc public class MailchimpSDK : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers public class Mailchimp : ObjectiveC.NSObject {
   public enum InitError : Swift.Error {
     case invalidToken(Swift.String)
   }
@@ -139,28 +139,28 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public typealias RequestCallback = (Swift.Result<Foundation.Data, MailchimpSDK.APIError>) -> Swift.Void
   public class func initialize(token: Swift.String, autoTagContacts: Swift.Bool = true, debugMode: Swift.Bool = false) throws
   @discardableResult
-  public class func createOrUpdate(contact: MailchimpSDK.Contact, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func createOrUpdate(contact: MailchimpSDK.Contact, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: MailchimpSDK.Address, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: MailchimpSDK.Address, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func setContactStatus(emailAddress: Swift.String, status: MailchimpSDK.Contact.Status, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func setContactStatus(emailAddress: Swift.String, status: MailchimpSDK.Contact.Status, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
-  public class func trackEventWithAttributes(event: MailchimpSDK.Event, result: MailchimpSDK.MailchimpSDK.RequestCallback? = nil) -> MailchimpSDK.EventOperation?
-  @objc override dynamic public init()
+  public class func trackEventWithAttributes(event: MailchimpSDK.Event, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.EventOperation?
   @objc deinit
+  @objc override dynamic public init()
 }
 extension URLRequest {
-  mutating public func addBasicAuthHeader(username: Swift.String, password: Swift.String?)
+  public mutating func addBasicAuthHeader(username: Swift.String, password: Swift.String?)
 }
 public enum CountryCode : Swift.String, Swift.Codable, Swift.CaseIterable {
   case USA
@@ -413,5 +413,6 @@ extension MailchimpSDK.Contact.TagStatus : Swift.RawRepresentable {}
 extension MailchimpSDK.Contact.Status : Swift.Equatable {}
 extension MailchimpSDK.Contact.Status : Swift.Hashable {}
 extension MailchimpSDK.Contact.Status : Swift.RawRepresentable {}
+extension MailchimpSDK.CountryCode : Swift.Equatable {}
 extension MailchimpSDK.CountryCode : Swift.Hashable {}
 extension MailchimpSDK.CountryCode : Swift.RawRepresentable {}

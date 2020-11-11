@@ -200,7 +200,7 @@ struct ContactView: View {
 
         let group = DispatchGroup()
 
-        MailchimpSDK.createOrUpdate(contact: contact) { result in
+        Mailchimp.createOrUpdate(contact: contact) { result in
             switch result {
             case .success:
                 print("Successfully added or updated contact: \(emailAddress)")
@@ -223,7 +223,7 @@ struct ContactView: View {
     func addAddress(_ group: DispatchGroup) {
         if let address = self.contactFormData.address {
             group.enter()
-            MailchimpSDK.setMergeField(emailAddress: self.contactFormData.emailAddress,
+            Mailchimp.setMergeField(emailAddress: self.contactFormData.emailAddress,
                                    name: "ADDRESS",
                                    address: address) { result in
                                     switch result {
@@ -243,7 +243,7 @@ struct ContactView: View {
         for mergeField in self.contactFormData.mergeFields {
             group.enter()
             let (key, value) = (mergeField.key, mergeField.value)
-            MailchimpSDK.setMergeField(emailAddress: self.contactFormData.emailAddress, name: key, value: value) { result in
+            Mailchimp.setMergeField(emailAddress: self.contactFormData.emailAddress, name: key, value: value) { result in
                 switch result {
                 case .success:
                     print("Successfully added merge field: \(key), \(value)")
@@ -258,7 +258,7 @@ struct ContactView: View {
     func addTags(_ group: DispatchGroup) {
         for tagToAdd in self.contactFormData.tagsToAdd {
             group.enter()
-            MailchimpSDK.addTag(name: tagToAdd, emailAddress: self.contactFormData.emailAddress) { result in
+            Mailchimp.addTag(name: tagToAdd, emailAddress: self.contactFormData.emailAddress) { result in
                 switch result {
                 case .success:
                     print("Successfully added tag: \(tagToAdd)")
@@ -273,7 +273,7 @@ struct ContactView: View {
     func removeTags(_ group: DispatchGroup) {
         for tagToRemove in self.contactFormData.tagsToRemove {
             group.enter()
-            MailchimpSDK.removeTag(name: tagToRemove, emailAddress: self.contactFormData.emailAddress) { result in
+            Mailchimp.removeTag(name: tagToRemove, emailAddress: self.contactFormData.emailAddress) { result in
                 switch result {
                 case .success:
                     DispatchQueue.main.async {

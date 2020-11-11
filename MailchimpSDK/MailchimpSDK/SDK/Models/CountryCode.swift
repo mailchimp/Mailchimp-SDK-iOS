@@ -1,6 +1,6 @@
 //
 //  CountryCode.swift
-//  Mailchimp SDK
+//  MailchimpSDK
 //
 //  Created by Chez Browne on 5/29/19.
 //  Copyright 2019 The Rocket Science Group LLC

@@ -1,6 +1,6 @@
 //
 //  ContactRequest.swift
-//  Mailchimp SDK
+//  MailchimpSDK
 //
 //  Created by Michael Patzer on 5/6/19.
 //  Copyright 2019 The Rocket Science Group LLC
@@ -25,10 +25,10 @@ struct ContactRequest: APIRequest {
     var apiPath: String { return "clientapi/1.0/contacts" }
     
     /// Callback once API request is complete.
-    public var callback: MailchimpSDK.RequestCallback?
+    public var callback: Mailchimp.RequestCallback?
     
     
-    init(contact: Contact, _ callback: MailchimpSDK.RequestCallback? = nil) {
+    init(contact: Contact, _ callback: Mailchimp.RequestCallback? = nil) {
         self.contact = contact
         self.callback = callback
     }
@@ -38,7 +38,7 @@ struct ContactRequest: APIRequest {
     }
     
     func headers() -> [String : String]? {
-        return ["Mailchimp-SDK-Version": MailchimpSDK.version, "Mailchimp-SDK-Platform": "iOS"]
+        return ["Mailchimp-SDK-Version": Mailchimp.version, "Mailchimp-SDK-Platform": "iOS"]
     }
     
     func httpVerb() -> HTTPVerb {

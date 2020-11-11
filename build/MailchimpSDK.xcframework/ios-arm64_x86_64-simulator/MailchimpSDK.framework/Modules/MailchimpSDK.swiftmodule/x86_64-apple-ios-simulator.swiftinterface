@@ -48,7 +48,7 @@ public enum APIError : Swift.Error {
   case requestError(err: Swift.Error)
   case requestTimeout
   case apiInvalidURL
-  case apiError(response: MailchimpSDK.APIErrorResponse)
+  case apiError(response: APIErrorResponse)
   case jsonMissingData
   case jsonMissingResponseData
   case jsonBoom
@@ -67,10 +67,10 @@ public struct Event : Swift.Codable {
 }
 public struct Contact : Swift.Codable {
   public var emailAddress: Swift.String
-  public var tags: [MailchimpSDK.Contact.Tag]?
-  public var marketingPermissions: [MailchimpSDK.Contact.MarketingPermission]?
-  public var mergeFields: [Swift.String : MailchimpSDK.MergeFieldValue]?
-  public var status: MailchimpSDK.Contact.Status?
+  public var tags: [Contact.Tag]?
+  public var marketingPermissions: [Contact.MarketingPermission]?
+  public var mergeFields: [Swift.String : MergeFieldValue]?
+  public var status: Contact.Status?
   public enum TagStatus : Swift.String, Swift.Codable {
     case active
     case inactive
@@ -91,8 +91,8 @@ public struct Contact : Swift.Codable {
   }
   public struct Tag : Swift.Codable {
     public let name: Swift.String
-    public let status: MailchimpSDK.Contact.TagStatus
-    public init(name: Swift.String, status: MailchimpSDK.Contact.TagStatus)
+    public let status: Contact.TagStatus
+    public init(name: Swift.String, status: Contact.TagStatus)
     public init(from decoder: Swift.Decoder) throws
     public func encode(to encoder: Swift.Encoder) throws
   }
@@ -109,11 +109,11 @@ public struct Contact : Swift.Codable {
 }
 public enum MergeFieldValue : Swift.Codable {
   case string(Swift.String)
-  case address(MailchimpSDK.Address)
+  case address(Address)
 }
 extension MergeFieldValue {
   public init(string: Swift.String)
-  public init(address: MailchimpSDK.Address)
+  public init(address: Address)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -123,11 +123,11 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public var city: Swift.String
   public var state: Swift.String?
   public var zipCode: Swift.String
-  public var country: MailchimpSDK.CountryCode
-  public init(addressLineOne: Swift.String, addressLineTwo: Swift.String?, city: Swift.String, state: Swift.String?, zipCode: Swift.String, country: MailchimpSDK.CountryCode)
+  public var country: CountryCode
+  public init(addressLineOne: Swift.String, addressLineTwo: Swift.String?, city: Swift.String, state: Swift.String?, zipCode: Swift.String, country: CountryCode)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
-  public static func == (a: MailchimpSDK.Address, b: MailchimpSDK.Address) -> Swift.Bool
+  public static func == (a: Address, b: Address) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers public class Mailchimp : ObjectiveC.NSObject {
   public enum InitError : Swift.Error {
@@ -136,26 +136,26 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public static var autoTagContacts: Swift.Bool
   public static var debugMode: Swift.Bool
   public static let version: Swift.String
-  public typealias RequestCallback = (Swift.Result<Foundation.Data, MailchimpSDK.APIError>) -> Swift.Void
+  public typealias RequestCallback = (Swift.Result<Foundation.Data, APIError>) -> Swift.Void
   public class func initialize(token: Swift.String, autoTagContacts: Swift.Bool = true, debugMode: Swift.Bool = false) throws
   @discardableResult
-  public class func createOrUpdate(contact: MailchimpSDK.Contact, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func createOrUpdate(contact: Contact, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func addTag(name: Swift.String, emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func addTags(names: [Swift.String], emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func removeTag(name: Swift.String, emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func removeTags(names: [Swift.String], emailAddress: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, value: Swift.String, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: MailchimpSDK.Address, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func setMergeField(emailAddress: Swift.String, name: Swift.String, address: Address, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func setContactStatus(emailAddress: Swift.String, status: MailchimpSDK.Contact.Status, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
+  public class func setContactStatus(emailAddress: Swift.String, status: Contact.Status, result: Mailchimp.RequestCallback? = nil) -> ContactOperation?
   @discardableResult
-  public class func trackEventWithAttributes(event: MailchimpSDK.Event, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.EventOperation?
+  public class func trackEventWithAttributes(event: Event, result: Mailchimp.RequestCallback? = nil) -> EventOperation?
   @objc deinit
   @objc override dynamic public init()
 }
@@ -402,17 +402,17 @@ public enum CountryCode : Swift.String, Swift.Codable, Swift.CaseIterable {
   public var rawValue: Swift.String {
     get
   }
-  public typealias AllCases = [MailchimpSDK.CountryCode]
-  public static var allCases: [MailchimpSDK.CountryCode] {
+  public typealias AllCases = [CountryCode]
+  public static var allCases: [CountryCode] {
     get
   }
 }
-extension MailchimpSDK.Contact.TagStatus : Swift.Equatable {}
-extension MailchimpSDK.Contact.TagStatus : Swift.Hashable {}
-extension MailchimpSDK.Contact.TagStatus : Swift.RawRepresentable {}
-extension MailchimpSDK.Contact.Status : Swift.Equatable {}
-extension MailchimpSDK.Contact.Status : Swift.Hashable {}
-extension MailchimpSDK.Contact.Status : Swift.RawRepresentable {}
-extension MailchimpSDK.CountryCode : Swift.Equatable {}
-extension MailchimpSDK.CountryCode : Swift.Hashable {}
-extension MailchimpSDK.CountryCode : Swift.RawRepresentable {}
+extension Contact.TagStatus : Swift.Equatable {}
+extension Contact.TagStatus : Swift.Hashable {}
+extension Contact.TagStatus : Swift.RawRepresentable {}
+extension Contact.Status : Swift.Equatable {}
+extension Contact.Status : Swift.Hashable {}
+extension Contact.Status : Swift.RawRepresentable {}
+extension CountryCode : Swift.Equatable {}
+extension CountryCode : Swift.Hashable {}
+extension CountryCode : Swift.RawRepresentable {}

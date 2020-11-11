@@ -20,10 +20,10 @@ import Foundation
 public class EventOperation: Operation {
     let event: Event
     var request: EventRequest?
-    let result: MailchimpSDK.RequestCallback?
+    let result: Mailchimp.RequestCallback?
     public var dataTask: URLSessionDataTask?
 
-    init(_ event: Event, result: MailchimpSDK.RequestCallback? = nil) {
+    init(_ event: Event, result: Mailchimp.RequestCallback? = nil) {
         self.event = event
         self.result = result
     }
@@ -68,7 +68,7 @@ public class EventOperation: Operation {
             request = EventRequest(event: event) { requestResult in
                 self.result?(requestResult)
 
-                if MailchimpSDK.debugMode {
+                if Mailchimp.debugMode {
                     switch requestResult {
                     case .success:
                         print("Event request succeeded.")
@@ -85,7 +85,7 @@ public class EventOperation: Operation {
                 self.state = .finished
             }
 
-            self.dataTask = MailchimpSDK.api?.process(request: request!)
+            self.dataTask = Mailchimp.api?.process(request: request!)
         }
     }
 }

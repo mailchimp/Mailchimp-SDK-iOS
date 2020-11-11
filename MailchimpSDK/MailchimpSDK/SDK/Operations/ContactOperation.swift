@@ -20,10 +20,10 @@ import Foundation
 public class ContactOperation: Operation {
     let contact: Contact
     var request: ContactRequest?
-    let result: MailchimpSDK.RequestCallback?
+    let result: Mailchimp.RequestCallback?
     public var dataTask: URLSessionDataTask?
 
-    init(_ contact: Contact, result: MailchimpSDK.RequestCallback? = nil) {
+    init(_ contact: Contact, result: Mailchimp.RequestCallback? = nil) {
         self.contact = contact
         self.result = result
     }
@@ -68,7 +68,7 @@ public class ContactOperation: Operation {
             request = ContactRequest(contact: contact) { requestResult in
                 self.result?(requestResult)
 
-                if MailchimpSDK.debugMode {
+                if Mailchimp.debugMode {
                     switch requestResult {
                     case .success:
                         print("Contact request succeeded.")
@@ -85,7 +85,7 @@ public class ContactOperation: Operation {
                 self.state = .finished
             }
 
-            self.dataTask = MailchimpSDK.api?.process(request: request!)
+            self.dataTask = Mailchimp.api?.process(request: request!)
         }
     }
 }

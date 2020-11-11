@@ -103,7 +103,7 @@ struct EventView: View {
         do {
             let event = try Event(emailAddress: emailAddress, name: eventName, properties: properties)
             
-            MailchimpSDK.trackEventWithAttributes(event: event) { result in
+            Mailchimp.trackEventWithAttributes(event: event) { result in
                 switch result {
                 case .success:
                     print("Successfully added event to \(emailAddress)")
