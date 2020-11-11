@@ -52,7 +52,7 @@ The initialize method has three different fields.
 * Auto Tagging (Optional): Auto Tagging automatically tags contacts with information such as Device Type and Platform. This is on by default.
 
 ```swift
-MailchimpSDK.initialize(token: sdkKey)
+Mailchimp.initialize(token: sdkKey)
 ```
 
 ## Collecting contact information
@@ -68,7 +68,7 @@ let mergeFields = ["FNAME": MergeFieldValue.string("Example"),
 contact.status = .subscribed
 contact.mergeFields = mergeFields
 contact.tags = [Contact.Tag(name: "mobile-signup", status: .active)]
-MailchimpSDK.createOrUpdate(contact: contact) { result in
+Mailchimp.createOrUpdate(contact: contact) { result in
     switch result {
     case .success:
         print("Successfully added or updated contact")
@@ -95,7 +95,7 @@ Single field update methods include
 ### Add/Remove Tags
 
 ```swift
-MailchimpSDK.addTag(name: tagName,
+Mailchimp.addTag(name: tagName,
                    emailAddress: "example@email.com") { result in
                    switch result {
                    case .success:
@@ -105,7 +105,7 @@ MailchimpSDK.addTag(name: tagName,
                    }
                }
 
-MailchimpSDK.removeTag(name: tagName,
+Mailchimp.removeTag(name: tagName,
                       emailAddress: "example@email.com") { result in
                       switch result {
                       case .success:
@@ -119,7 +119,7 @@ MailchimpSDK.removeTag(name: tagName,
 ### Set Merge Fields
 
 ```swift
-MailchimpSDK.setMergeField(emailAddress: "example@email.com",
+Mailchimp.setMergeField(emailAddress: "example@email.com",
                           name: fieldName,
                           value: fieldValue) { result in
                           switch result {
@@ -197,7 +197,7 @@ To add an event associated with a contact, first instantiate a new Event struct.
 
 ```swift
 let event: Event = try! Event(emailAddress: "example@email.com", name: "signup", properties: ["source": "iOS"])
-MailchimpSDK.trackEventWithAttributes(event: event) { result in
+Mailchimp.trackEventWithAttributes(event: event) { result in
     switch result {
     case .success:
         print("Successfully tracked an event")
