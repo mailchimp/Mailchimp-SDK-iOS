@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MailchimpSDK-Swift.h</key>
 		<data>
-		4boh2+xrKhlmHb+XhFMShV7fW2k=
+		h9PrTkyl9yvk7jV+wgqMzOThQFA=
 		</data>
 		<key>Headers/MailchimpSDK.h</key>
 		<data>
@@ -14,55 +14,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Vuvrnm/7SL2e0T4dQCCjrmjE6v0=
+		2BCoeEhwnzx9SCXFWeFtJEz9QE8=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		DhmtOIMD1rv7qLXzRhMc/vBeo7Q=
+		Wg1RdnG6c4WnhY13sgpAn24oJ2w=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		QtJ7/u3djA+3WOUKEnYrOM3b/p0=
+		Lz7b7ts9w8KmFKQkDwxv9HrJ0eY=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		czKgFO4Q60QcdiUv0kQvKP5YNtg=
+		AoOmil4qIz5Ghq8hU0svLMT6IZo=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		DhmtOIMD1rv7qLXzRhMc/vBeo7Q=
+		Wg1RdnG6c4WnhY13sgpAn24oJ2w=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		QtJ7/u3djA+3WOUKEnYrOM3b/p0=
+		Lz7b7ts9w8KmFKQkDwxv9HrJ0eY=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		czKgFO4Q60QcdiUv0kQvKP5YNtg=
+		AoOmil4qIz5Ghq8hU0svLMT6IZo=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		be9RaVjieF5aCTkoErXUZsuq4oA=
+		qHZJBAap+VdUiL0JFzggrt5Vkj4=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Jd2XJXz2dLFqjn1vbtL0ez+e320=
+		PvIUQB0rnfGkZ/HvJWR40mQtQAY=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CTMF8OXAXKiWMtvKG4TXoyI/Hlo=
+		02CCK+51vR5WBwJMhorTlopMX74=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		be9RaVjieF5aCTkoErXUZsuq4oA=
+		qHZJBAap+VdUiL0JFzggrt5Vkj4=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		Jd2XJXz2dLFqjn1vbtL0ez+e320=
+		PvIUQB0rnfGkZ/HvJWR40mQtQAY=
 		</data>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		CTMF8OXAXKiWMtvKG4TXoyI/Hlo=
+		02CCK+51vR5WBwJMhorTlopMX74=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5pCAfxngJsnDVPqdw/ACap21v8VqAh3knV+NwzU6EO0=
+			p97rH2/2oNCdXh1EEVY4wmOJK3kYhNK4nrMXYT/0xhg=
 			</data>
 		</dict>
 		<key>Headers/MailchimpSDK.h</key>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FUlzAvrHWFi4YKHSVCqdKiDrN5lhv+LOFPXDb3MsG8E=
+			DbIvy296L3dICSPz4f188zOuk9Xa8EL8kY1SOWKEDtg=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkdIRETBkJe5IwIYio6sNaPBQRWmY8nNEoI85fME0FI=
+			EJun/3gWtQO/yhUXSLEN9uHb71BrgfRWQZ5sMXwOWBY=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OhyfDl50JOlkPMyD4UXwOEfkN3kO5tGSqOYm5SnOyDc=
+			axaJG4U/DTXN09ObCBa1rkvUfUYGuMU8JEr7GdJmT5U=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FUlzAvrHWFi4YKHSVCqdKiDrN5lhv+LOFPXDb3MsG8E=
+			DbIvy296L3dICSPz4f188zOuk9Xa8EL8kY1SOWKEDtg=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xkdIRETBkJe5IwIYio6sNaPBQRWmY8nNEoI85fME0FI=
+			EJun/3gWtQO/yhUXSLEN9uHb71BrgfRWQZ5sMXwOWBY=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OhyfDl50JOlkPMyD4UXwOEfkN3kO5tGSqOYm5SnOyDc=
+			axaJG4U/DTXN09ObCBa1rkvUfUYGuMU8JEr7GdJmT5U=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yd//9ZJe29eoHI0DyMqx80LWJ+mmuXC69P83DLLChkk=
+			w7g/MGFvNwjV7QNJcmkAUdHby1Qfv9+Sm8jd3n2nHHc=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H5sIj1a82BfGfCcyaqc5+2EZjp7FbWlwlTiuEY9QlD0=
+			X7i7fMF/Wl/IEYBZSzHC/fsgZ8gqwT+NOicw35bs/jI=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			doqsRHSgbP8v03czPonWlKG99l3UPZbAbMrrZFdqDbI=
+			q1fhvNE5dt8Ey7B/eodk3TpPUoIsbJ7GzaslXBgOLiw=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yd//9ZJe29eoHI0DyMqx80LWJ+mmuXC69P83DLLChkk=
+			w7g/MGFvNwjV7QNJcmkAUdHby1Qfv9+Sm8jd3n2nHHc=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H5sIj1a82BfGfCcyaqc5+2EZjp7FbWlwlTiuEY9QlD0=
+			X7i7fMF/Wl/IEYBZSzHC/fsgZ8gqwT+NOicw35bs/jI=
 			</data>
 		</dict>
 		<key>Modules/MailchimpSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			doqsRHSgbP8v03czPonWlKG99l3UPZbAbMrrZFdqDbI=
+			q1fhvNE5dt8Ey7B/eodk3TpPUoIsbJ7GzaslXBgOLiw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
