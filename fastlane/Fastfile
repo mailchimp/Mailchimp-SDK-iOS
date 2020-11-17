@@ -59,9 +59,6 @@ platform :ios do
 
     # When fastlane supports -create-xcframework in the xcodebuild() command, we could replace this (https://github.com/fastlane/fastlane/issues/15055)
     sh("xcodebuild -create-xcframework -framework '#{device_archive_path}/Products/Library/Frameworks/#{framework_name}.framework' -framework '#{simulator_archive_path}/Products/Library/Frameworks/#{framework_name}.framework' -output '#{output_path}/#{xcframework_file_name}'")
-
-    # Post-processing step to fix module references that Swift thinks are class references
-    sh("cd #{output_path}/#{xcframework_file_name}; find . -name '*.swiftinterface' -exec sed -i -e 's/MailchimpSDK\\.//g' {} \\;")
   end
 
   desc "Create a release candidate"
