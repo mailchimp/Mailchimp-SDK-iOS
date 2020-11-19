@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D3BCA6B2566E66200F9C268 /* MailchimpSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA642566E66200F9C268 /* MailchimpSDKTests.swift */; };
+		8D3BCA6C2566E66200F9C268 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA662566E66200F9C268 /* EventTests.swift */; };
+		8D3BCA6D2566E66200F9C268 /* MergeFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA682566E66200F9C268 /* MergeFieldTests.swift */; };
+		8D3BCA6E2566E66200F9C268 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA692566E66200F9C268 /* ContactTests.swift */; };
 		B95896A122774C0C00F7509B /* MailchimpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958969722774C0C00F7509B /* MailchimpSDK.framework */; };
-		B95896A622774C0C00F7509B /* MailchimpSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896A522774C0C00F7509B /* MailchimpSDKTests.swift */; };
 		B95896A822774C0C00F7509B /* MailchimpSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B958969A22774C0C00F7509B /* MailchimpSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B95896B82277689F00F7509B /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896B72277689F00F7509B /* URLRequest.swift */; };
 		B95896BD227768AB00F7509B /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896B9227768AB00F7509B /* APIRequest.swift */; };
@@ -20,14 +23,11 @@
 		B95896CC2280BAA700F7509B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896CB2280BAA700F7509B /* Contact.swift */; };
 		B95896D02281FD2D00F7509B /* PostBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896CF2281FD2D00F7509B /* PostBody.swift */; };
 		BF6D325623721B5B003F4A19 /* EventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6D325523721B5B003F4A19 /* EventOperation.swift */; };
-		BFCF7A1F236B3503004BFC2B /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCF7A1E236B3503004BFC2B /* EventTests.swift */; };
 		BFD503FB2369DA4500939748 /* EventRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD503FA2369DA4500939748 /* EventRequest.swift */; };
 		BFD503FD2369DAB100939748 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD503FC2369DAB100939748 /* Event.swift */; };
 		BFF30D7F2371FB3D005FAABC /* ContactOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */; };
 		F239C3FD229F2DDF00FB85C3 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */; };
-		F26745E522F89DAC00AD1E93 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26745E422F89DAC00AD1E93 /* ContactTests.swift */; };
 		F288D79E2289BBD7004CB563 /* Mailchimp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288D79D2289BBD7004CB563 /* Mailchimp.swift */; };
-		F2A2203122984C7600F57058 /* MergeFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2203022984C7600F57058 /* MergeFieldTests.swift */; };
 		F2AFC4D022947FFB006C742B /* MergeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFC4CF22947FFB006C742B /* MergeField.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,12 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D3BCA642566E66200F9C268 /* MailchimpSDKTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailchimpSDKTests.swift; sourceTree = "<group>"; };
+		8D3BCA662566E66200F9C268 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		8D3BCA682566E66200F9C268 /* MergeFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeFieldTests.swift; sourceTree = "<group>"; };
+		8D3BCA692566E66200F9C268 /* ContactTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
+		8D3BCA6A2566E66200F9C268 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B958969722774C0C00F7509B /* MailchimpSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailchimpSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B958969A22774C0C00F7509B /* MailchimpSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailchimpSDK.h; sourceTree = "<group>"; };
 		B958969B22774C0C00F7509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95896A022774C0C00F7509B /* MailchimpSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MailchimpSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B95896A522774C0C00F7509B /* MailchimpSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailchimpSDKTests.swift; sourceTree = "<group>"; };
-		B95896A722774C0C00F7509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95896B72277689F00F7509B /* URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		B95896B9227768AB00F7509B /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		B95896BA227768AB00F7509B /* AnzeeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnzeeAPI.swift; sourceTree = "<group>"; };
@@ -58,14 +61,11 @@
 		B95896CB2280BAA700F7509B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		B95896CF2281FD2D00F7509B /* PostBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBody.swift; sourceTree = "<group>"; };
 		BF6D325523721B5B003F4A19 /* EventOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOperation.swift; sourceTree = "<group>"; };
-		BFCF7A1E236B3503004BFC2B /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		BFD503FA2369DA4500939748 /* EventRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRequest.swift; sourceTree = "<group>"; };
 		BFD503FC2369DAB100939748 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOperation.swift; sourceTree = "<group>"; };
 		F239C3FC229F2DDF00FB85C3 /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
-		F26745E422F89DAC00AD1E93 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		F288D79D2289BBD7004CB563 /* Mailchimp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mailchimp.swift; path = SDK/Mailchimp.swift; sourceTree = "<group>"; };
-		F2A2203022984C7600F57058 /* MergeFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeFieldTests.swift; sourceTree = "<group>"; };
 		F2AFC4CF22947FFB006C742B /* MergeField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,11 +88,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D3BCA632566E66200F9C268 /* MailchimpSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3BCA642566E66200F9C268 /* MailchimpSDKTests.swift */,
+				8D3BCA652566E66200F9C268 /* Events */,
+				8D3BCA672566E66200F9C268 /* Audience */,
+				8D3BCA6A2566E66200F9C268 /* Info.plist */,
+			);
+			name = MailchimpSDKTests;
+			path = ../../Tests/MailchimpSDKTests;
+			sourceTree = "<group>";
+		};
+		8D3BCA652566E66200F9C268 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8D3BCA662566E66200F9C268 /* EventTests.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8D3BCA672566E66200F9C268 /* Audience */ = {
+			isa = PBXGroup;
+			children = (
+				8D3BCA682566E66200F9C268 /* MergeFieldTests.swift */,
+				8D3BCA692566E66200F9C268 /* ContactTests.swift */,
+			);
+			path = Audience;
+			sourceTree = "<group>";
+		};
 		B958968D22774C0C00F7509B = {
 			isa = PBXGroup;
 			children = (
 				B958969922774C0C00F7509B /* MailchimpSDK */,
-				B95896A422774C0C00F7509B /* MailchimpSDKTests */,
+				8D3BCA632566E66200F9C268 /* MailchimpSDKTests */,
 				B958969822774C0C00F7509B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,17 +145,6 @@
 				B958969B22774C0C00F7509B /* Info.plist */,
 			);
 			path = MailchimpSDK;
-			sourceTree = "<group>";
-		};
-		B95896A422774C0C00F7509B /* MailchimpSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				F2A2202F22984C4500F57058 /* Audience */,
-				BFCF7A1D236B34F3004BFC2B /* Events */,
-				B95896A522774C0C00F7509B /* MailchimpSDKTests.swift */,
-				B95896A722774C0C00F7509B /* Info.plist */,
-			);
-			path = MailchimpSDKTests;
 			sourceTree = "<group>";
 		};
 		B95896B122774C9A00F7509B /* SDK */ = {
@@ -189,14 +207,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BFCF7A1D236B34F3004BFC2B /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				BFCF7A1E236B3503004BFC2B /* EventTests.swift */,
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
 		BFF30D7D2371FB3D005FAABC /* Operations */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,15 +214,6 @@
 				BFF30D7E2371FB3D005FAABC /* ContactOperation.swift */,
 			);
 			path = Operations;
-			sourceTree = "<group>";
-		};
-		F2A2202F22984C4500F57058 /* Audience */ = {
-			isa = PBXGroup;
-			children = (
-				F2A2203022984C7600F57058 /* MergeFieldTests.swift */,
-				F26745E422F89DAC00AD1E93 /* ContactTests.swift */,
-			);
-			path = Audience;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,10 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFCF7A1F236B3503004BFC2B /* EventTests.swift in Sources */,
-				B95896A622774C0C00F7509B /* MailchimpSDKTests.swift in Sources */,
-				F2A2203122984C7600F57058 /* MergeFieldTests.swift in Sources */,
-				F26745E522F89DAC00AD1E93 /* ContactTests.swift in Sources */,
+				8D3BCA6E2566E66200F9C268 /* ContactTests.swift in Sources */,
+				8D3BCA6D2566E66200F9C268 /* MergeFieldTests.swift in Sources */,
+				8D3BCA6C2566E66200F9C268 /* EventTests.swift in Sources */,
+				8D3BCA6B2566E66200F9C268 /* MailchimpSDKTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +555,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X34GKSR943;
-				INFOPLIST_FILE = MailchimpSDKTests/Info.plist;
+				INFOPLIST_FILE = ../../Tests/MailchimpSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -573,7 +574,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X34GKSR943;
-				INFOPLIST_FILE = MailchimpSDKTests/Info.plist;
+				INFOPLIST_FILE = ../../Tests/MailchimpSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
