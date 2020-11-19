@@ -15,7 +15,7 @@
 //    limitations under the License.
 //
 
-import Foundation
+import UIKit
 
 /// Provides an interface for storing user behavior in Mailchimp
 public class Mailchimp: NSObject {
