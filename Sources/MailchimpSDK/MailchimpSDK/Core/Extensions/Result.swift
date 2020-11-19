@@ -14,6 +14,7 @@
 //    See the License for the specific language governing permissions and
 //    limitations under the License.
 //
+import Foundation
 
 extension Result where Success == Data, Failure == APIError {
     func decoded<T: Decodable>(using decoder: JSONDecoder = .init()) throws -> T {
