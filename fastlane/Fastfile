@@ -20,7 +20,7 @@ default_platform(:ios)
 project_name = "MailchimpSDK"
 workspace_name = "#{project_name}.xcworkspace"
 sdk_scheme_name = project_name
-project_file_path = "#{project_name}/#{project_name}.xcodeproj/"
+project_file_path = "Sources/#{project_name}/#{project_name}.xcodeproj/"
 podspec_path = "#{project_name}.podspec"
 build_path = "../build"
 deploy_path = "../deploy"
@@ -172,5 +172,5 @@ def output_path
 end
 
 def marketing_version
-  get_version_number(xcodeproj: "MailchimpSDK/MailchimpSDK.xcodeproj")
+  get_version_number(xcodeproj: "Sources/MailchimpSDK/MailchimpSDK.xcodeproj/")
 end

@@ -149,7 +149,7 @@ If autotagging is enabled, all created or updated contacts will be automatically
 Merge fields are key value pairs that can be set on each contact. They can be customized for each audience. Common examples of merge fields are first name, last name, and phone number.
 The value of a merge field can be set and updated from the SDK. Merge fields are keyed off of a capitalized string. The Key does not include vertical bars on either end (ex. FNAME and not |FNAME|).
 
-Note: Merge Fields can be marked as required on the audience settings. If you attempt to create a contact without setting the required merge fields, the request will silently fail.
+While Merge Fields can be marked as required on the audience settings, those requirements will not be enforced when using the Mailchimp SDK.
 
 #### String Merge Fields
 The majority of merge field types are represented as a String. This includes Text, Number, Radio Buttons, Drop Downs, Dates, Birthday, Phone Numbers, and Websites.

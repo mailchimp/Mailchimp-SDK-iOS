@@ -15,7 +15,7 @@
 //    limitations under the License.
 //
 
-import Foundation
+import UIKit
 
 /// Provides an interface for storing user behavior in Mailchimp
 public class Mailchimp: NSObject {
@@ -28,7 +28,7 @@ public class Mailchimp: NSObject {
     public static var debugMode: Bool = false
 
     /// Version of this SDK.
-    public static let version: String = "2.0.1"
+    public static let version: String = "2.0.2"
 
     /// The API protocol conforming object that processes requests for this class.
     static var api: API?
