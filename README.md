@@ -238,3 +238,6 @@ Why do calls silently fail?
 
 How do I use the SDK in my Objective-C project?
 >The best way to interact with an Objective-C project is to create a Swift wrapper object that can initialize the SDK and create a contact for you.
+
+Does the Mailchimp mobile SDK track my users?
+>The Mailchimp mobile SDK does not track your users. The Mailchimp mobile SDK automatically adds your mobile application users to your Mailchimp audience so that you can send them marketing communications. Mailchimp does not provide information about your app’s users to data brokers. The mobile SDK does not combine user data from your app with information from other apps in order to place targeted advertisements. For more information regarding Mailchimp’s mobile SDK, please click [here](https://mailchimp.com/help/mobile-sdk/).
