@@ -19,7 +19,7 @@
 
 ### Requirements
 
-* Deployment target iOS 11.0 or above
+* Deployment target iOS 12.0 or above
 * Xcode version 11 or above
 * Ruby 2.4 or above (for fastlane)
 
