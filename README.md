@@ -42,6 +42,10 @@ pod 'MailchimpSDK'
   Click on the Project navigator, select your app’s target, go to the General tab, scroll down to Frameworks, Libraries, and Embedded Content. Drag the Mailchimp.xcframework from this repo into this section.
 
   ![Drag the framework into Frameworks, Libraries, and Embedded Content](https://user-images.githubusercontent.com/42216769/69161161-8f641480-0a9f-11ea-93ec-5599aac85423.gif)
+  
+  ### Option 3: Swift Package Manager (Xcode 11+)
+  To use Swift Package Manager, you should use Xcode 11 to open your project. Click File -> Swift Packages -> Add Package Dependency, enter MailchimpSDK repo's URL or you can log into Xcode with your GitHub account and just type MailchimpSDK to search.
+
 
 ## Initializing the SDK
 
@@ -234,3 +238,6 @@ Why do calls silently fail?
 
 How do I use the SDK in my Objective-C project?
 >The best way to interact with an Objective-C project is to create a Swift wrapper object that can initialize the SDK and create a contact for you.
+
+Does the Mailchimp mobile SDK track my users?
+>The Mailchimp mobile SDK does not track your users. The Mailchimp mobile SDK automatically adds your mobile application users to your Mailchimp audience so that you can send them marketing communications. Mailchimp does not provide information about your app’s users to data brokers. The mobile SDK does not combine user data from your app with information from other apps in order to place targeted advertisements. For more information regarding Mailchimp’s mobile SDK, please click [here](https://mailchimp.com/help/mobile-sdk/).
