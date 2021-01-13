@@ -43,8 +43,8 @@ pod 'MailchimpSDK'
 
   ![Drag the framework into Frameworks, Libraries, and Embedded Content](https://user-images.githubusercontent.com/42216769/69161161-8f641480-0a9f-11ea-93ec-5599aac85423.gif)
   
-  ### Option 3: Swift Package Manager (Xcode 11+)
-  To use Swift Package Manager, you should use Xcode 11 to open your project. Click File -> Swift Packages -> Add Package Dependency, enter MailchimpSDK repo's URL or you can log into Xcode with your GitHub account and just type MailchimpSDK to search.
+  ### Option 3: Swift Package Manager
+  To use Swift Package Manager, in Xcode, click File -> Swift Packages -> Add Package Dependency, enter MailchimpSDK repo's URL or you can log into Xcode with your GitHub account and just type MailchimpSDK to search.
 
 
 ## Initializing the SDK
