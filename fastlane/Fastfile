@@ -91,7 +91,7 @@ platform :ios do
       name: "v#{version}",
       tag_name: "v#{version}",
       description: (File.read(changelog_path) rescue "No Changelog provided"),
-      commitish: "master",
+      commitish: "main",
       upload_assets: deploy_zip
     )
   end
