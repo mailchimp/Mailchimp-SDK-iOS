@@ -11,6 +11,7 @@
 		8D3BCA6C2566E66200F9C268 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA662566E66200F9C268 /* EventTests.swift */; };
 		8D3BCA6D2566E66200F9C268 /* MergeFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA682566E66200F9C268 /* MergeFieldTests.swift */; };
 		8D3BCA6E2566E66200F9C268 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3BCA692566E66200F9C268 /* ContactTests.swift */; };
+		8DF0738326F8EB6900F0544C /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0738226F8EB6900F0544C /* Debug.swift */; };
 		B95896A122774C0C00F7509B /* MailchimpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B958969722774C0C00F7509B /* MailchimpSDK.framework */; };
 		B95896A822774C0C00F7509B /* MailchimpSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B958969A22774C0C00F7509B /* MailchimpSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B95896B82277689F00F7509B /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95896B72277689F00F7509B /* URLRequest.swift */; };
@@ -47,6 +48,7 @@
 		8D3BCA682566E66200F9C268 /* MergeFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeFieldTests.swift; sourceTree = "<group>"; };
 		8D3BCA692566E66200F9C268 /* ContactTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		8D3BCA6A2566E66200F9C268 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF0738226F8EB6900F0544C /* Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debug.swift; sourceTree = "<group>"; };
 		B958969722774C0C00F7509B /* MailchimpSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MailchimpSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B958969A22774C0C00F7509B /* MailchimpSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MailchimpSDK.h; sourceTree = "<group>"; };
 		B958969B22774C0C00F7509B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				B95896B72277689F00F7509B /* URLRequest.swift */,
 				B95896C5227B73CC00F7509B /* Result.swift */,
+				8DF0738226F8EB6900F0544C /* Debug.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,7 +276,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "The Rocket Science Group LLC";
 				TargetAttributes = {
 					B958969622774C0C00F7509B = {
@@ -342,6 +345,7 @@
 				B95896BD227768AB00F7509B /* APIRequest.swift in Sources */,
 				B95896B82277689F00F7509B /* URLRequest.swift in Sources */,
 				F239C3FD229F2DDF00FB85C3 /* CountryCode.swift in Sources */,
+				8DF0738326F8EB6900F0544C /* Debug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +398,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -460,6 +465,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -512,7 +518,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -541,7 +547,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.theRocketScienceGroup.MailchimpSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -561,7 +567,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.Mailchimp-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -580,7 +586,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0.3;
+				MARKETING_VERSION = 2.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theRocketScienceGroup.Mailchimp-SDKTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

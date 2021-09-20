@@ -1,9 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MailchimpSDK
 import Foundation
 @_exported import MailchimpSDK
 import Swift
+import UIKit
 @objc @_hasMissingDesignatedInitializers public class ContactOperation : Foundation.Operation {
   public var dataTask: Foundation.URLSessionDataTask?
   @objc override dynamic public var isAsynchronous: Swift.Bool {
@@ -17,8 +18,8 @@ import Swift
   }
   @objc override dynamic public func start()
   @objc override dynamic public func main()
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class EventOperation : Foundation.Operation {
   public var dataTask: Foundation.URLSessionDataTask?
@@ -33,15 +34,16 @@ import Swift
   }
   @objc override dynamic public func start()
   @objc override dynamic public func main()
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 public struct APIErrorResponse : Swift.Codable {
+  public let title: Swift.String?
   public let status: Swift.Int
-  public let type: Swift.String
-  public let detail: Swift.String
-  public init(from decoder: Swift.Decoder) throws
+  public let type: Swift.String?
+  public let detail: Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public enum APIError : Swift.Error {
   case jsonParsingError(err: Swift.String)
@@ -62,8 +64,8 @@ public struct Event : Swift.Codable {
   public var name: Swift.String
   public var properties: [Swift.String : Swift.String]?
   public init(emailAddress: Swift.String, name: Swift.String, properties: [Swift.String : Swift.String]?) throws
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public struct Contact : Swift.Codable {
   public var emailAddress: Swift.String
@@ -74,8 +76,8 @@ public struct Contact : Swift.Codable {
   public enum TagStatus : Swift.String, Swift.Codable {
     case active
     case inactive
-    public typealias RawValue = Swift.String
     public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
@@ -83,8 +85,8 @@ public struct Contact : Swift.Codable {
   public enum Status : Swift.String, Swift.Codable {
     case subscribed
     case transactional
-    public typealias RawValue = Swift.String
     public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
@@ -93,19 +95,19 @@ public struct Contact : Swift.Codable {
     public let name: Swift.String
     public let status: MailchimpSDK.Contact.TagStatus
     public init(name: Swift.String, status: MailchimpSDK.Contact.TagStatus)
-    public init(from decoder: Swift.Decoder) throws
     public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
   }
   public struct MarketingPermission : Swift.Codable {
     public let marketingPermissionId: Swift.String
     public let enabled: Swift.Bool
     public init(marketingPermissionId: Swift.String, enabled: Swift.Bool)
-    public init(from decoder: Swift.Decoder) throws
     public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
   }
   public init(emailAddress: Swift.String)
-  public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public enum MergeFieldValue : Swift.Codable {
   case string(Swift.String)
@@ -125,9 +127,9 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public var zipCode: Swift.String
   public var country: MailchimpSDK.CountryCode
   public init(addressLineOne: Swift.String, addressLineTwo: Swift.String?, city: Swift.String, state: Swift.String?, zipCode: Swift.String, country: MailchimpSDK.CountryCode)
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
   public static func == (a: MailchimpSDK.Address, b: MailchimpSDK.Address) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class Mailchimp : ObjectiveC.NSObject {
   public enum InitError : Swift.Error {
@@ -156,8 +158,8 @@ public struct Address : Swift.Codable, Swift.Equatable {
   public class func setContactStatus(emailAddress: Swift.String, status: MailchimpSDK.Contact.Status, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.ContactOperation?
   @discardableResult
   public class func trackEventWithAttributes(event: MailchimpSDK.Event, result: MailchimpSDK.Mailchimp.RequestCallback? = nil) -> MailchimpSDK.EventOperation?
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 extension URLRequest {
   public mutating func addBasicAuthHeader(username: Swift.String, password: Swift.String?)
@@ -397,13 +399,13 @@ public enum CountryCode : Swift.String, Swift.Codable, Swift.CaseIterable {
   case Yemen
   case Zambia
   case Zimbabwe
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
-  public var rawValue: Swift.String {
+  public typealias AllCases = [MailchimpSDK.CountryCode]
+  public typealias RawValue = Swift.String
+  public static var allCases: [MailchimpSDK.CountryCode] {
     get
   }
-  public typealias AllCases = [MailchimpSDK.CountryCode]
-  public static var allCases: [MailchimpSDK.CountryCode] {
+  public var rawValue: Swift.String {
     get
   }
 }

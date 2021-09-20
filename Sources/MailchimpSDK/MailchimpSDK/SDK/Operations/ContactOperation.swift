@@ -65,19 +65,21 @@ public class ContactOperation: Operation {
         } else {
             state = .executing
 
-            request = ContactRequest(contact: contact) { requestResult in
+            request = ContactRequest(contact: contact) { [weak self] requestResult in
+                guard let self = self else { return }
+                
                 self.result?(requestResult)
 
                 if Mailchimp.debugMode {
                     switch requestResult {
                     case .success:
-                        print("Contact request succeeded.")
+                        debugPrint("Contact request succeeded.")
                     case .failure(let error):
-                        print("Contact request failed with error: \(error.localizedDescription)")
+                        debugPrint("Contact request failed with error: \(error.localizedDescription)")
                         if case .apiError(let response) = error {
-                            print("API Error status: \(response.status)")
-                            print("API Error detail: \(response.detail)")
-                            print("API Error type: \(response.type)")
+                            debugPrint("API Error status: \(response.status)")
+                            debugPrint("API Error detail: \(response.detail ?? "Unknown")")
+                            debugPrint("API Error type: \(response.type ?? "Unknown")")
                         }
                     }
                 }
