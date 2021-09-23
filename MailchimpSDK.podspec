@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MailchimpSDK'
-  s.version          = '2.0.3'
+  s.version          = '2.0.4'
   s.summary          = 'Mailchimp SDK for iOS'
 
   s.description      = <<-DESC

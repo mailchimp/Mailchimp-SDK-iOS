@@ -65,19 +65,21 @@ public class EventOperation: Operation {
         } else {
             state = .executing
 
-            request = EventRequest(event: event) { requestResult in
+            request = EventRequest(event: event) { [weak self] requestResult in
+                guard let self = self else { return }
+                
                 self.result?(requestResult)
 
                 if Mailchimp.debugMode {
                     switch requestResult {
                     case .success:
-                        print("Event request succeeded.")
+                        debugPrint("Event request succeeded.")
                     case .failure(let error):
-                        print("Event request failed with error: \(error.localizedDescription)")
+                        debugPrint("Event request failed with error: \(error.localizedDescription)")
                         if case .apiError(let response) = error {
-                            print("API Error status: \(response.status)")
-                            print("API Error detail: \(response.detail)")
-                            print("API Error type: \(response.type)")
+                            debugPrint("API Error status: \(response.status)")
+                            debugPrint("API Error detail: \(response.detail ?? "Unknown")")
+                            debugPrint("API Error type: \(response.type ?? "Unknown")")
                         }
                     }
                 }

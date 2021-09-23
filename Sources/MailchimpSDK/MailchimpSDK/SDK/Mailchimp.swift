@@ -53,9 +53,7 @@ public class Mailchimp: NSObject {
         Mailchimp.autoTagContacts = autoTagContacts
         Mailchimp.debugMode = debugMode
 
-        if debugMode {
-            print("Mailchimp SDK Initialized. Version: \(version)")
-        }
+        debugPrint("Mailchimp SDK Initialized. Version: \(version)")
     }
     
     /// Creates a new Contact and permanently sets the status. If the Contact already exists, contact
@@ -76,10 +74,8 @@ public class Mailchimp: NSObject {
             let combinedTags = autoTags() + (contactInfo.tags ?? [])
             contactInfo.tags = combinedTags
 
-            if debugMode {
-                for tag in autoTags() {
-                    print("Adding auto-tag \"\(tag.name)\" to create contact request.")
-                }
+            for tag in autoTags() {
+                debugPrint("Adding auto-tag \"\(tag.name)\" to create contact request.")
             }
         }
 
