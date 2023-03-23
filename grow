@@ -1,0 +1,10 @@
+MailchimpSDK.initialize(token: 15105dec58fe8da10a452095b950fce6-us21)
+var contact: Contact = Contact(emailAddress: "Insert Email Here")
+MailchimpSDK.createOrUpdate(contact: contact) { result in
+    switch result {
+    case .success:
+        print("Successfully added or updated contact")
+    case .failure(let error):
+        print("Error: \(error.localizedDescription)")
+    }
+}
